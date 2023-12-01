@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MinatKu</string>
+    <string name="success_desc">Selamat Akun kamu sudah berhasil terdaftar. klik tombol kembali masuk untuk ke masuk ke halaman beranda.</string>
+    <string name="success_main">Sukses Terdaftar</string>
+    <string name="image_success">Image_Success</string>
+    <string name="Masuk">Masuk</string>
+    <string name="forg_main">Lupa Password?</string>
+    <string name="forg_desc">Untuk mengatur ulang kata sandi, Anda memerlukan email atau nomor ponsel yang dapat diautentikasi.</string>
+    <string name="email">Email</string>
+    <string name="check_main">Periksa Email Anda</string>
+    <string name="check_desc">Kami telah mengirimkan pembaruan kata sandi ke alamat email Novallinohamid@gmail.com</string>
+    <string name="email_check">Anda belum menerima email?  Kirim ulang</string>
 </resources>
