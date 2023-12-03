@@ -10,4 +10,6 @@
     <string name="check_main">Periksa Email Anda</string>
     <string name="check_desc">Kami telah mengirimkan pembaruan kata sandi ke alamat email Novallinohamid@gmail.com</string>
     <string name="email_check">Anda belum menerima email?  Kirim ulang</string>
+    <string name="invalidEmail">Email Invalid</string>
+    <string name="invalidPassword">"Password cannot be less than 8 characters"</string>
 </resources>
