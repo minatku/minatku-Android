@@ -7,8 +7,6 @@ android {
     namespace = "com.bangkit.minatku"
     compileSdk = 34
 
-
-
     defaultConfig {
         applicationId = "com.bangkit.minatku"
         minSdk = 24
