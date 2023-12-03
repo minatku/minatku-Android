@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MinatKu</string>
+    <string name="invalidEmail">Email Invalid</string>
+    <string name="invalidPassword">"Password cannot be less than 8 characters"</string>
 </resources>
