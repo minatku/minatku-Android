@@ -7,6 +7,8 @@ android {
     namespace = "com.bangkit.minatku"
     compileSdk = 34
 
+
+
     defaultConfig {
         applicationId = "com.bangkit.minatku"
         minSdk = 24
@@ -32,6 +34,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
     }
 }
 
