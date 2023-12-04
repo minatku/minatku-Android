@@ -1,4 +1,4 @@
-package com.bangkit.minatku.Community
+package com.bangkit.minatku.ui.Community
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
