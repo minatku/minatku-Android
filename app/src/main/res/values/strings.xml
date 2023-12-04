@@ -12,4 +12,18 @@
     <string name="email_check">Anda belum menerima email?  Kirim ulang</string>
     <string name="invalidEmail">Email Invalid</string>
     <string name="invalidPassword">"Password cannot be less than 8 characters"</string>
+    <string name="detail_join">Join Premium Kembangkan minat dan bakatmu</string>
+    <string name="username">Username</string>
+    <string name="hai">HAI :)</string>
+    <string name="button_join">Join Now</string>
+    <string name="lorem_ipsum">Lorem Ipsum</string>
+    <string name="progress_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inciditincidunt</string>
+    <string name="judul">Judul</string>
+    <string name="description">Description</string>
+    <string name="checklist">checklist</string>
+    <string name="image_modul">Image Modul</string>
+    <string name="title_modul">Modul Title</string>
+    <string name="introduction">Introduction</string>
+    <string name="backbutton">BackButton</string>
+    <string name="home">Home</string>
 </resources>
