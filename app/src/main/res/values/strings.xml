@@ -26,4 +26,28 @@
     <string name="introduction">Introduction</string>
     <string name="backbutton">BackButton</string>
     <string name="home">Home</string>
+    <string-array name="judul_dummy">
+        <item>Judul 1</item>
+        <item>Judul 2</item>
+        <item>Judul 3</item>
+        <item>Judul 4</item>
+        <item>Judul 5</item>
+    </string-array>
+
+    <string-array name="desc_dummy">
+        <item>Desc 1</item>
+        <item>Desc 2</item>
+        <item>Desc 3</item>
+        <item>Desc 4</item>
+        <item>Desc 5</item>
+    </string-array>
+
+    <string-array name="text_dummy">
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue eu consequat ac felis donec et odio pellentesque diam. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec. Augue lacus viverra vitae congue eu consequat. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Accumsan tortor posuere ac ut consequat semper viverra nam. Sit amet consectetur adipiscing elit. Neque ornare aenean euismod elementum nisi quis. In hac habitasse</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue eu consequat ac felis donec et odio pellentesque diam. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec. Augue lacus viverra vitae congue eu consequat. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Accumsan tortor posuere ac ut consequat semper viverra nam. Sit amet consectetur adipiscing elit. Neque ornare aenean euismod elementum nisi quis. In hac habitasse</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue eu consequat ac felis donec et odio pellentesque diam. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec. Augue lacus viverra vitae congue eu consequat. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Accumsan tortor posuere ac ut consequat semper viverra nam. Sit amet consectetur adipiscing elit. Neque ornare aenean euismod elementum nisi quis. In hac habitasse</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue eu consequat ac felis donec et odio pellentesque diam. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec. Augue lacus viverra vitae congue eu consequat. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Accumsan tortor posuere ac ut consequat semper viverra nam. Sit amet consectetur adipiscing elit. Neque ornare aenean euismod elementum nisi quis. In hac habitasse</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue eu consequat ac felis donec et odio pellentesque diam. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec. Augue lacus viverra vitae congue eu consequat. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Accumsan tortor posuere ac ut consequat semper viverra nam. Sit amet consectetur adipiscing elit. Neque ornare aenean euismod elementum nisi quis. In hac habitasse</item>
+    </string-array>
+
 </resources>
