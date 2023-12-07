@@ -18,62 +18,97 @@
         android:padding="8dp">
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/fp_user"
             android:layout_width="83dp"
             android:layout_height="81dp"
             card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintEnd_toStartOf="@+id/textView7"
-            card_view:layout_constraintHorizontal_bias="0.217"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.051"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
-            card_view:layout_constraintVertical_bias="0.0"
+            card_view:layout_constraintVertical_bias="0.054"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/nama_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="228dp"
-            android:text="Nama"
+            android:text="@string/nama"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.333"
+            card_view:layout_constraintStart_toEndOf="@+id/fp_user"
             card_view:layout_constraintTop_toTopOf="parent"
-            card_view:layout_constraintVertical_bias="0.023" />
+            card_view:layout_constraintVertical_bias="0.065" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/tv_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="username"
+            android:text="@string/username"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.05"
-            card_view:layout_constraintStart_toEndOf="@+id/textView7"
+            card_view:layout_constraintHorizontal_bias="0.07"
+            card_view:layout_constraintStart_toEndOf="@+id/nama_user"
             card_view:layout_constraintTop_toTopOf="parent"
-            card_view:layout_constraintVertical_bias="0.023" />
+            card_view:layout_constraintVertical_bias="0.065" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/tv_waktu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tanggal"
-            tools:layout_editor_absoluteX="124dp"
-            tools:layout_editor_absoluteY="53dp" />
+            android:text="@string/tanggal"
+            card_view:layout_constraintBottom_toTopOf="@+id/tv_descpost"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.025"
+            card_view:layout_constraintStart_toEndOf="@+id/fp_user"
+            card_view:layout_constraintTop_toBottomOf="@+id/nama_user"
+            card_view:layout_constraintVertical_bias="0.185" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/tv_descpost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Post"
-            tools:layout_editor_absoluteX="20dp"
-            tools:layout_editor_absoluteY="128dp" />
+            android:text="@string/post"
+            card_view:layout_constraintBottom_toTopOf="@+id/iv_post1"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.043"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/fp_user"
+            card_view:layout_constraintVertical_bias="0.513" />
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/iv_post1"
             android:layout_width="203dp"
             android:layout_height="134dp"
-            tools:layout_editor_absoluteX="27dp"
-            tools:layout_editor_absoluteY="155dp"
+            android:layout_marginStart="40dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/fp_user"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <ImageView
+            android:id="@+id/iv_post2"
+            android:layout_width="108dp"
+            android:layout_height="65dp"
+            card_view:layout_constraintBottom_toTopOf="@+id/iv_post3"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.555"
+            card_view:layout_constraintStart_toEndOf="@+id/iv_post1"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.969"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <ImageView
+            android:id="@+id/iv_post3"
+            android:layout_width="108dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="56dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.555"
+            card_view:layout_constraintStart_toEndOf="@+id/iv_post1"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
