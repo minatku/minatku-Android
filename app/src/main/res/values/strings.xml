@@ -6,4 +6,14 @@
     <string name="username">username</string>
     <string name="tanggal">Tanggal</string>
     <string name="post">Post</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="nomor_handpone">Nomor Handpone</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="lokasi">Lokasi</string>
+    <string name="email">Email</string>
+    <string name="edit_profil">Edit Profil</string>
+    <string name="detail_minat_dan_bakat">Detail Minat dan Bakat</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="no_telepon">No.Telepon</string>
+    <string name="l_n">L/N</string>
 </resources>
