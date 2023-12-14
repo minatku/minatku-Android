@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/base_page"
     tools:context=".ui.signup.SignUpActivity">
 
     <TextView
@@ -223,7 +223,7 @@
         android:layout_height="64dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:backgroundTint="#4CD9D9"
+        android:backgroundTint="@color/blue"
         android:fontFamily="@font/dm_sans_bold"
         android:text="MASUK"
         android:textColor="#FFFFFF"

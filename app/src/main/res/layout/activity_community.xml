@@ -43,9 +43,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:layout_gravity="bottom|end"
-            android:backgroundTint="@color/orange"
+            android:backgroundTint="@color/blue"
             app:fabSize="normal"
-            app:tint="@color/orange"
+            app:tint="@color/blue"
             tools:ignore="ContentDescription"
             app:srcCompat="@drawable/ic_plus" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
