@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MinatKu"
         tools:targetApi="31">
         <activity
+            android:name=".ui.editprofil.EditProfilActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.settings.SettingsActivity"
             android:exported="false" />
         <activity

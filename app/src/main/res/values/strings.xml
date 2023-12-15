@@ -16,4 +16,9 @@
     <string name="nama_lengkap">Nama Lengkap</string>
     <string name="no_telepon">No.Telepon</string>
     <string name="l_n">L/N</string>
+    <string name="edit_foto_profil">Edit Foto Profil</string>
+    <string name="masukkan_email">Masukkan Email</string>
+    <string name="nomor_handphone">Nomor Handphone</string>
+    <string name="simpan_perubahan">Simpan Perubahan</string>
+    <string name="edit_foto">Edit Foto</string>
 </resources>

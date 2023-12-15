@@ -146,7 +146,7 @@
         android:layout_marginEnd="32dp"
         android:alpha="100"
         android:background="#FFFFFF"
-        android:hint="Masukkan Email"
+        android:hint="@string/masukkan_email"
         app:boxStrokeColor="#4CD9D9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
