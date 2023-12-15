@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/NavHome"
+        android:icon="@drawable/icon_home"
+        android:title="Home"
+        app:itemIconSize="30dp" />
+
+<!--    <item-->
+<!--        android:id="@+id/NavCommunity"-->
+<!--        android:icon="@drawable/icon_community"-->
+<!--        android:title="Community"-->
+<!--        app:itemIconSize="30dp" />-->
+
+    <item
+        android:id="@+id/NavModul"
+        android:icon="@drawable/icon_book"
+        android:title="Modul"
+        app:itemIconSize="30dp" />
+
+    <item
+        android:id="@+id/NavMentor"
+        android:icon="@drawable/icon_chat_buble"
+        android:title="Mentor"
+        app:itemIconSize="30dp" />
+
+<!--    <item-->
+<!--        android:id="@+id/NavProfile"-->
+<!--        android:icon="@drawable/icon_avatar"-->
+<!--        android:title="Profile"-->
+<!--        app:itemIconSize="45dp" />-->
+</menu>

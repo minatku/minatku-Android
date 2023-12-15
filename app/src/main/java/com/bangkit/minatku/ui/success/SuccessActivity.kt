@@ -12,7 +12,5 @@ class SuccessActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_success)
 
-        val myButton: Button = findViewById(R.id.masuk)
-        myButton.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#4CD9D9"))
     }
 }
