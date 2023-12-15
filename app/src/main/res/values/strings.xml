@@ -32,4 +32,8 @@
     <string name="daftar_dulu_yuk">Daftar Dulu Yuk :)</string>
     <string name="edit_password">Edit Password</string>
     <string name="logout">Logout</string>
+    <string name="simpan_sandi">Simpan Sandi</string>
+    <string name="konfirmasi_kata_sandi">Konfirmasi Kata Sandi</string>
+    <string name="kata_sandi_baru">Kata Sandi Baru</string>
+    <string name="kata_sandi_lama">Kata Sandi Lama</string>
 </resources>
