@@ -30,4 +30,6 @@
     <string name="password">Password</string>
     <string name="minatku_text">Minatku Text</string>
     <string name="daftar_dulu_yuk">Daftar Dulu Yuk :)</string>
+    <string name="edit_password">Edit Password</string>
+    <string name="logout">Logout</string>
 </resources>
