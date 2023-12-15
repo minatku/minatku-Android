@@ -7,305 +7,272 @@
     android:background="@color/base_page"
     tools:context=".ui.profil.ProfilActivity">
 
-    <ImageView
-        android:id="@+id/iv_bgprofil"
-        android:layout_width="507dp"
-        android:layout_height="245dp"
-        android:layout_marginBottom="560dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/bg_profil" />
-
-    <View
-        android:id="@+id/container_nama"
-        android:layout_width="352dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/rounded_corner"
-        app:layout_constraintBottom_toTopOf="@+id/nohp_container"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tt_jeniskelamin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/jenis_kelamin"
-        android:fontFamily="@font/dm_sans"
-        app:layout_constraintBottom_toTopOf="@+id/container_namalengkap"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nohp_container"
-        app:layout_constraintVertical_bias="0.888" />
-
-    <View
-        android:id="@+id/container_ttl"
-        android:layout_width="352dp"
-        android:layout_height="33dp"
-        android:background="@drawable/rounded_corner"
-        app:layout_constraintBottom_toTopOf="@+id/container_lokasi"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_namalengkap"
-        app:layout_constraintVertical_bias="0.545" />
-
     <View
         android:id="@+id/container_lokasi"
         android:layout_width="352dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="136dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_corner"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tt_ttl"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_lokasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="@string/lokasi"
+        android:textColor="@color/text_abu"
+        app:layout_constraintBottom_toBottomOf="@+id/container_lokasi"
+        app:layout_constraintEnd_toEndOf="@+id/container_lokasi"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="@+id/container_lokasi"
+        app:layout_constraintTop_toTopOf="@+id/container_lokasi"
+        app:layout_constraintVertical_bias="0.571" />
+
+    <TextView
+        android:id="@+id/tt_lokasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="@string/lokasi"
+        app:layout_constraintBottom_toTopOf="@+id/container_lokasi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent" />
 
     <View
         android:id="@+id/container_namalengkap"
         android:layout_width="352dp"
-        android:layout_height="33dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toTopOf="@+id/tt_email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="441dp" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="@string/nama_lengkap"
+        android:textColor="@color/text_abu"
+        app:layout_constraintBottom_toBottomOf="@+id/container_namalengkap"
+        app:layout_constraintEnd_toEndOf="@+id/container_namalengkap"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="@+id/container_namalengkap"
+        app:layout_constraintTop_toTopOf="@+id/container_namalengkap"
+        app:layout_constraintVertical_bias="0.523" />
+
+    <View
+        android:id="@+id/container_jeniskelamin"
+        android:layout_width="352dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toTopOf="@+id/tt_nomorhp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_jeniskelamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="@string/l_n"
+        android:textColor="@color/text_abu"
+        app:layout_constraintBottom_toBottomOf="@+id/container_jeniskelamin"
+        app:layout_constraintEnd_toEndOf="@+id/container_jeniskelamin"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="@+id/container_jeniskelamin"
+        app:layout_constraintTop_toTopOf="@+id/container_jeniskelamin"
+        app:layout_constraintVertical_bias="0.523" />
+
+    <TextView
+        android:id="@+id/tt_jeniskelamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="@string/jenis_kelamin"
+        app:layout_constraintBottom_toTopOf="@+id/container_jeniskelamin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/container_ttl"
+        android:layout_width="352dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toTopOf="@+id/btn_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tt_ttl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="@string/tanggal_lahir"
+        app:layout_constraintBottom_toTopOf="@+id/container_ttl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_ttl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="@string/tanggal_lahir"
+        android:textColor="@color/text_abu"
+        app:layout_constraintBottom_toBottomOf="@+id/container_ttl"
+        app:layout_constraintEnd_toEndOf="@+id/container_ttl"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="@+id/container_ttl"
+        app:layout_constraintTop_toTopOf="@+id/container_ttl"
+        app:layout_constraintVertical_bias="0.523" />
+
+    <View
+        android:id="@+id/user_container"
+        android:layout_width="352dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toTopOf="@+id/tt_nama"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="@string/username"
+        android:textColor="@color/text_abu"
+        app:layout_constraintBottom_toBottomOf="@+id/user_container"
+        app:layout_constraintEnd_toEndOf="@+id/user_container"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="@+id/user_container"
+        app:layout_constraintTop_toTopOf="@+id/user_container"
+        app:layout_constraintVertical_bias="0.523" />
+
+    <View
+        android:id="@+id/nohp_container"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toTopOf="@+id/tt_lokasi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_handphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="@string/no_telepon"
+        android:textColor="@color/text_abu"
+        app:layout_constraintBottom_toBottomOf="@+id/nohp_container"
+        app:layout_constraintEnd_toEndOf="@+id/nohp_container"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="@+id/nohp_container"
+        app:layout_constraintTop_toTopOf="@+id/nohp_container"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <View
+        android:id="@+id/email_container"
+        android:layout_width="351dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toTopOf="@+id/tt_jeniskelamin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="@string/email"
+        android:textColor="@color/text_abu"
+        app:layout_constraintBottom_toBottomOf="@+id/email_container"
+        app:layout_constraintEnd_toEndOf="@+id/email_container"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="@+id/email_container"
+        app:layout_constraintTop_toTopOf="@+id/email_container"
+        app:layout_constraintVertical_bias="0.619" />
 
     <TextView
         android:id="@+id/tt_nomorhp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/nomor_handpone"
         android:fontFamily="@font/dm_sans"
+        android:text="@string/nomor_handpone"
         app:layout_constraintBottom_toTopOf="@+id/nohp_container"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_nama"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/iv_user"
         android:layout_width="97dp"
         android:layout_height="88dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tt_username"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_bgprofil"
-        app:layout_constraintVertical_bias="0.014"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tt_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Username"
         android:fontFamily="@font/dm_sans"
+        android:text="Username"
         app:layout_constraintBottom_toTopOf="@+id/user_container"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
-        app:layout_constraintStart_toEndOf="@+id/iv_user"
-        app:layout_constraintTop_toBottomOf="@+id/iv_bgprofil"
-        app:layout_constraintVertical_bias="0.666" />
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tt_nama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
         android:text="Nama Lengkap"
-        android:fontFamily="@font/dm_sans"
-        app:layout_constraintBottom_toTopOf="@+id/container_nama"
+        app:layout_constraintBottom_toTopOf="@+id/container_namalengkap"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_user"
-        app:layout_constraintVertical_bias="0.973" />
-
-    <View
-        android:id="@+id/user_container"
-        android:layout_width="239dp"
-        android:layout_height="33dp"
-        android:background="@drawable/rounded_corner"
-        app:layout_constraintBottom_toTopOf="@+id/email_container"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.553"
-        app:layout_constraintStart_toEndOf="@+id/iv_user"
-        app:layout_constraintTop_toBottomOf="@+id/iv_bgprofil"
-        app:layout_constraintVertical_bias="0.488" />
-
-    <TextView
-        android:id="@+id/tt_ttl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/tanggal_lahir"
-        android:fontFamily="@font/dm_sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_namalengkap" />
-
-    <TextView
-        android:id="@+id/tt_lokasi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lokasi"
-        android:fontFamily="@font/dm_sans"
-        app:layout_constraintBottom_toTopOf="@+id/container_lokasi"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tt_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/email"
         android:fontFamily="@font/dm_sans"
+        android:text="@string/email"
         app:layout_constraintBottom_toTopOf="@+id/email_container"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
-        app:layout_constraintStart_toEndOf="@+id/iv_user"
-        app:layout_constraintTop_toBottomOf="@+id/user_container"
-        app:layout_constraintVertical_bias="0.75" />
-
-    <View
-        android:id="@+id/nohp_container"
-        android:layout_width="352dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="28dp"
-        android:background="@drawable/rounded_corner"
-        app:layout_constraintBottom_toTopOf="@+id/container_namalengkap"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <View
-        android:id="@+id/email_container"
-        android:layout_width="239dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/rounded_corner"
-        app:layout_constraintBottom_toTopOf="@+id/container_nama"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.553"
-        app:layout_constraintStart_toEndOf="@+id/iv_user" />
 
     <Button
         android:id="@+id/btn_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/edit_profil"
+        android:layout_marginBottom="40dp"
         android:backgroundTint="@color/blue"
         android:fontFamily="@font/dm_sans_bold"
+        android:text="@string/edit_profil"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_lokasi" />
-
-    <Button
-        android:id="@+id/btn_to_detail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:backgroundTint="@color/blue"
-        android:fontFamily="@font/dm_sans_bold"
-        android:text="@string/detail_minat_dan_bakat"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/username"
-        android:textColor="@color/text_abu"
-        android:fontFamily="@font/dm_sans_bold"
-        app:layout_constraintBottom_toBottomOf="@+id/user_container"
-        app:layout_constraintEnd_toEndOf="@+id/user_container"
-        app:layout_constraintHorizontal_bias="0.138"
-        app:layout_constraintStart_toStartOf="@+id/user_container"
-        app:layout_constraintTop_toTopOf="@+id/user_container" />
-
-    <TextView
-        android:id="@+id/tv_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/email"
-        android:fontFamily="@font/dm_sans_bold"
-        android:textColor="@color/text_abu"
-        app:layout_constraintBottom_toBottomOf="@+id/email_container"
-        app:layout_constraintEnd_toEndOf="@+id/email_container"
-        app:layout_constraintHorizontal_bias="0.121"
-        app:layout_constraintStart_toStartOf="@+id/email_container"
-        app:layout_constraintTop_toTopOf="@+id/email_container" />
-
-    <TextView
-        android:id="@+id/tv_nama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/nama_lengkap"
-        android:fontFamily="@font/dm_sans_bold"
-        android:textColor="@color/text_abu"
-        app:layout_constraintBottom_toBottomOf="@+id/container_nama"
-        app:layout_constraintEnd_toEndOf="@+id/container_nama"
-        app:layout_constraintHorizontal_bias="0.085"
-        app:layout_constraintStart_toStartOf="@+id/container_nama"
-        app:layout_constraintTop_toTopOf="@+id/container_nama" />
-
-    <TextView
-        android:id="@+id/tv_handphone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/no_telepon"
-        android:fontFamily="@font/dm_sans_bold"
-        android:textColor="@color/text_abu"
-        app:layout_constraintBottom_toBottomOf="@+id/nohp_container"
-        app:layout_constraintEnd_toEndOf="@+id/nohp_container"
-        app:layout_constraintHorizontal_bias="0.074"
-        app:layout_constraintStart_toStartOf="@+id/nohp_container"
-        app:layout_constraintTop_toTopOf="@+id/nohp_container" />
-
-    <TextView
-        android:id="@+id/tv_jeniskelamin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/l_n"
-        android:fontFamily="@font/dm_sans_bold"
-        android:textColor="@color/text_abu"
-        app:layout_constraintBottom_toBottomOf="@+id/container_namalengkap"
-        app:layout_constraintEnd_toEndOf="@+id/container_namalengkap"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="@+id/container_namalengkap"
-        app:layout_constraintTop_toTopOf="@+id/container_namalengkap" />
-
-    <TextView
-        android:id="@+id/tv_ttl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tanggal_lahir"
-        android:fontFamily="@font/dm_sans_bold"
-        android:textColor="@color/text_abu"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="511dp" />
-
-    <TextView
-        android:id="@+id/tv_lokasi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lokasi"
-        android:fontFamily="@font/dm_sans_bold"
-        android:textColor="@color/text_abu"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintBottom_toBottomOf="@+id/container_lokasi"
-        app:layout_constraintEnd_toEndOf="@+id/container_lokasi"
-        app:layout_constraintStart_toStartOf="@+id/container_lokasi"
-        app:layout_constraintTop_toTopOf="@+id/container_lokasi" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
