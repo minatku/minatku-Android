@@ -6,14 +6,12 @@
     <string name="Masuk">Masuk</string>
     <string name="forg_main">Lupa Password?</string>
     <string name="forg_desc">Untuk mengatur ulang kata sandi, Anda memerlukan email atau nomor ponsel yang dapat diautentikasi.</string>
-    <string name="email">Email</string>
     <string name="check_main">Periksa Email Anda</string>
     <string name="check_desc">Kami telah mengirimkan pembaruan kata sandi ke alamat email Novallinohamid@gmail.com</string>
     <string name="email_check">Anda belum menerima email?  Kirim ulang</string>
     <string name="invalidEmail">Email Invalid</string>
     <string name="invalidPassword">"Password cannot be less than 8 characters"</string>
     <string name="nama">Nama</string>
-    <string name="username">username</string>
     <string name="tanggal">Tanggal</string>
     <string name="post">Post</string>
     <string name="jenis_kelamin">Jenis Kelamin</string>
