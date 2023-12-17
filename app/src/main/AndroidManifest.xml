@@ -15,6 +15,9 @@
         android:theme="@style/Theme.MinatKu"
         tools:targetApi="31">
         <activity
+            android:name=".ui.assesment.AssesmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.starttest.StartTestActivity"
             android:exported="false" />
         <activity
@@ -34,9 +37,10 @@
             android:exported="false" />
         <activity
             android:name=".ui.navbar.NavbarActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -75,9 +79,8 @@
             android:exported="false" />
         <activity
             android:name=".ui.splash.SplashScreenActivity"
-            android:exported="false">
+            android:exported="false"></activity>
 
-        </activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
