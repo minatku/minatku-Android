@@ -25,10 +25,12 @@
             android:name=".ui.settings.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.profil.ProfilActivity"
+            android:name=".ui.profil.ProfilFragment"
             android:exported="false" />
         <activity
-            android:name=".ui.community.CommunityActivity"
+            android:name=".ui.community.CommunityFragment"
+            android:exported="false" />
+        <activity
             android:name=".ui.navbar.NavbarActivity"
             android:exported="false" />
         <activity
@@ -62,10 +64,10 @@
             android:name=".ui.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.splash.SplashScreenActivity"
+            android:name=".ui.welcome.WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.welcome.WelcomeActivity"
+            android:name=".ui.splash.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
