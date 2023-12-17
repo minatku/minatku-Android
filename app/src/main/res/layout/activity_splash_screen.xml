@@ -8,7 +8,7 @@
     tools:context=".ui.splash.SplashScreenActivity" >
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iv_logominatku"
         android:layout_width="367dp"
         android:layout_height="556dp"
         android:src="@drawable/logo_minatku"
@@ -18,13 +18,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/tv_minatkutext"
         android:layout_width="270dp"
         android:layout_height="37dp"
         android:src="@drawable/minatku_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_logominatku" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
