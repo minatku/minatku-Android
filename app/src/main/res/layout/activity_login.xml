@@ -11,7 +11,7 @@
         android:id="@+id/tv_descapp"
         android:layout_width="298dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         android:fontFamily="@font/dm_sans"
         android:text="@string/minatku_siap_membantu_kamu_mengatasi_masalah_minat_dan_bakatmu"
         android:textAlignment="center"
@@ -26,7 +26,6 @@
         android:id="@+id/tv_selamatdatang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
         android:fontFamily="@font/dm_sans_bold"
         android:text="@string/selamat_datang"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -36,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_minatkutext"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -132,7 +131,7 @@
         android:id="@+id/btn_login"
         android:layout_width="329dp"
         android:layout_height="59dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="44dp"
         android:backgroundTint="@color/blue"
         android:fontFamily="@font/dm_sans_bold"
         android:text="@string/masuk"
@@ -189,11 +188,13 @@
         android:id="@+id/iv_minatkutext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/tv_selamatdatang"
+        android:contentDescription="@string/minatku_text"
+        app:layout_constraintBottom_toTopOf="@+id/tv_descapp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/minatku_text"
+        app:layout_constraintVertical_bias="0.347"
         app:srcCompat="@drawable/minatku_text_black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

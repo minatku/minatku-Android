@@ -19,8 +19,6 @@ class SuccessActivity : AppCompatActivity() {
         binding = ActivitySuccessBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-<<<<<<< Updated upstream
-=======
         val myButton: Button = findViewById(R.id.masuk)
         myButton.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#4CD9D9"))
 
@@ -28,6 +26,5 @@ class SuccessActivity : AppCompatActivity() {
             // Start SignUpActivity when txt_daftar is clicked
             startActivity(Intent(this, LoginActivity::class.java))
         }
->>>>>>> Stashed changes
     }
 }
