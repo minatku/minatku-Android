@@ -1,4 +1,4 @@
-package com.bangkit.minatku.data
+package com.bangkit.minatku.Data
 
 data class PostDummy(
     val username: String,

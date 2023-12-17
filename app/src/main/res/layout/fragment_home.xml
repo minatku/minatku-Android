@@ -108,98 +108,47 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="23dp"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/dmsans_18pt_regular"
-            android:text="@string/lorem_ipsum"
+            android:fontFamily="@font/dmsans_18pt_bold"
+            android:text="@string/minat_dan_bakatmu"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.015"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/kotakView" />
 
-        <ImageView
-            android:id="@+id/model1"
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bakat"
+            android:layout_width="359dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="340dp"
-            android:layout_marginEnd="5dp"
-            app:layout_constraintEnd_toStartOf="@+id/model2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/model_beranda" />
-
-        <ImageView
-            android:id="@+id/model2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="340dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/model_beranda" />
-
-        <ImageView
-            android:id="@+id/model3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="340dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toEndOf="@+id/model2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/model_beranda" />
-
-        <TextView
-            android:id="@+id/head_progress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:fontFamily="@font/dmsans_18pt_regular"
-            android:text="@string/lorem_ipsum"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.073"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/model2" />
-
-        <ImageView
-            android:id="@+id/progress_barr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toStartOf="@+id/progress_detail"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/head_progress"
-            app:srcCompat="@drawable/progres_barr_beranda" />
-
-        <TextView
-            android:id="@+id/progress_detail"
-            android:layout_width="301dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
-            android:fontFamily="@font/dmsans_18pt_light"
-            android:text="@string/progress_text"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.709"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/model2" />
-
-        <Button
-            android:id="@+id/progress_button"
-            android:layout_width="378dp"
-            android:layout_height="55dp"
+            android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:padding="0dp"
-            android:text="xx"
-            android:textSize="15sp"
+            android:background="@drawable/rounded"
+            android:backgroundTint="@color/blue"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintHorizontal_bias="0.519"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progress_detail" />
+            app:layout_constraintTop_toBottomOf="@+id/head_model">
+            <TextView
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:fontFamily="@font/dmsans_18pt_bold"
+                android:textSize="20sp"
+                android:text="Hasil Asesmen"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/hasil_asesmen"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/dmsans_18pt_regular"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"/>
+        </androidx.cardview.widget.CardView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

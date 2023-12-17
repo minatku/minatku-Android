@@ -33,9 +33,10 @@ class ModulPremFragment : Fragment() {
         val judul = resources.getStringArray(R.array.judul_dummy)
         val desc = resources.getStringArray(R.array.desc_dummy)
         val text = resources.getStringArray(R.array.text_dummy)
+        val img = resources.getStringArray(R.array.pict_dummy)
         val list = ArrayList<Modul_Dummy>()
         for (i in judul.indices){
-            val modul = Modul_Dummy(judul[i],desc[i], text[i])
+            val modul = Modul_Dummy(judul[i],desc[i], img[i], text[i])
             list.add(modul)
         }
         return list
@@ -57,6 +58,7 @@ class ModulPremFragment : Fragment() {
         val movedata = Intent(requireContext(), Detail_Modul::class.java)
         movedata.putExtra(Detail_Modul.EXTRA_JUDUL, modulDummy.judul)
         movedata.putExtra(Detail_Modul.EXTRA_TEXT, modulDummy.text)
+        movedata.putExtra(Detail_Modul.EXTRA_PICT, modulDummy.img)
         startActivity(movedata)
     }
 }

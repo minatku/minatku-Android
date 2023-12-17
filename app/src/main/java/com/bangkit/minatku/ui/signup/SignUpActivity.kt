@@ -14,7 +14,7 @@ class SignUpActivity : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnSignup.setOnClickListener {
+        binding.btnLogin.setOnClickListener {
             // Start SignUpActivity when txt_daftar is clicked
             startActivity(Intent(this, SuccessActivity::class.java))
         }
