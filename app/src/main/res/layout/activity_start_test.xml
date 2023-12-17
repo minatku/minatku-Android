@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".ui.starttest.StartTestActivity">
+
+    <ImageView
+        android:id="@+id/tv_minatku"
+        android:layout_width="170dp"
+        android:layout_height="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_starttest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/minatku_text" />
+
+    <ImageView
+        android:id="@+id/iv_starttest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_taglinestarttest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/image_starttest" />
+
+    <ImageView
+        android:id="@+id/tv_taglinestarttest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toTopOf="@+id/bg_whiteforbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/cariminatmu_text" />
+
+    <View
+        android:id="@+id/bg_whiteforbtn"
+        android:layout_width="411dp"
+        android:layout_height="109dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_starttest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="@string/ikuti_tes"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_whiteforbtn"
+        app:layout_constraintEnd_toEndOf="@+id/bg_whiteforbtn"
+        app:layout_constraintStart_toStartOf="@+id/bg_whiteforbtn"
+        app:layout_constraintTop_toTopOf="@+id/bg_whiteforbtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

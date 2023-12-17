@@ -13,6 +13,22 @@
         android:theme="@style/Theme.MinatKu"
         tools:targetApi="31">
         <activity
+            android:name=".ui.starttest.StartTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.editpassword.EditPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.editprofil.EditProfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profil.ProfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.community.CommunityActivity"
             android:name=".ui.navbar.NavbarActivity"
             android:exported="false" />
         <activity
