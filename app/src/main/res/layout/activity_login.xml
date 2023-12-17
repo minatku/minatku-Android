@@ -13,7 +13,11 @@
         android:layout_height="42dp"
         android:layout_marginBottom="32dp"
         android:fontFamily="@font/dm_sans"
+<<<<<<< Updated upstream
         android:text="@string/minatku_siap_membantu_kamu_mengatasi_masalah_minat_dan_bakatmu"
+=======
+        android:text="@string/tagline"
+>>>>>>> Stashed changes
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="12sp"
@@ -78,7 +82,10 @@
         android:alpha="100"
         android:background="#FFFFFF"
         android:hint="@string/masukkan_email"
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
         app:boxStrokeColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/tv_passsign"
         app:layout_constraintEnd_toEndOf="parent"
@@ -130,10 +137,20 @@
 
     <Button
         android:id="@+id/btn_login"
+<<<<<<< Updated upstream
         android:layout_width="329dp"
         android:layout_height="59dp"
         android:layout_marginBottom="96dp"
         android:backgroundTint="@color/blue"
+=======
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#4CD9D9"
+        android:background="@drawable/rounded"
+>>>>>>> Stashed changes
         android:fontFamily="@font/dm_sans_bold"
         android:text="@string/masuk"
         android:textColor="#FFFFFF"
@@ -155,8 +172,15 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_login"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< Updated upstream
         app:layout_constraintHorizontal_bias="0.89"
         app:layout_constraintStart_toStartOf="parent" />
+=======
+        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/edlayout_password"
+        app:layout_constraintVertical_bias="0.506" />
+>>>>>>> Stashed changes
 
     <TextView
         android:id="@+id/txt_daftar"
@@ -196,4 +220,16 @@
         android:contentDescription="@string/minatku_text"
         app:srcCompat="@drawable/minatku_text_black" />
 
+<<<<<<< Updated upstream
+=======
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="."
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/edlayout_password"
+        tools:layout_editor_absoluteX="203dp" />
+
+>>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>

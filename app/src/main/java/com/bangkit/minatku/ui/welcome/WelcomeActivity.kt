@@ -8,6 +8,7 @@ import com.bangkit.minatku.R
 import com.bangkit.minatku.ui.login.LoginActivity
 
 class WelcomeActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
