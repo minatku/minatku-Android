@@ -7,6 +7,17 @@
     android:background="@color/base_page"
     tools:context=".ui.editprofil.EditProfilActivity">
 
+    <ImageView
+        android:id="@+id/btn_backprofil"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/tombol_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back" />
+
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/iv_user"
         android:layout_width="120dp"

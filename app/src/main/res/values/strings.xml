@@ -63,6 +63,7 @@
     <string name="minat_dan_bakatmu">Minat Dan Bakatmu</string>
     <string name="masukkan_kata">Masukkan kata</string>
     <string name="minatku">MinatKu</string>
+    <string name="tombol_back">tombol back</string>
     <string-array name="judul_dummy">
         <item>Informatika</item>
         <item>Matematika</item>
@@ -142,5 +143,45 @@
               \nMendidik adalah memproses siswa menjadi baik, sopan santun, jujur, bertanggung jawab. Sedangkan mengajar adalah memproses orang menjadi pintar, cerdas, pandai. Jika kita bersekolah cuma hanya menjadi sebuah lembaga pengajaran, dan tidak mendidik, akibatnya siswa kita hanya pintar tetapi tidak baik.
               \nMendidik dan mengajar itu berbeda, tetapi keduanya saling membantu, dan saling mendukung. Contohnya mendidik, kita sebagai guru atau pendidik. Kita harus mendidik anak-anak kita supaya berbicara jujur, baik, tolong menolong sesama orang lain, sopan santun terhadap guru dan orang lain. Sedangkan mengajar, kita harus mengisi ilmu-ilmu pembelajaran, mengisi konsep-konsep dalam pembelajaran, dan menerangkan ilmu pembelajaran. Jadi mendidik dan mengajar itu berbeda.
               \n\t\tJadi kita sebagai guru atau pendidik. Kita memiliki ajaran mendidik dan mengajar yang berbeda beda. Kalau menurut saya. Mendidik dan mengajar anak sd harus percaya diri, kita harus kreatif dalam mengajar, bisa mengkondisikan kelas, harus menarik, dan tidak boleh kaku.</item>
+    </string-array>
+
+    <string-array name="username_dummy">
+        <item>Siegfried69</item>
+        <item>andini_nrl</item>
+        <item>Brianydst</item>
+        <item>rzki</item>
+        <item>labib88</item>
+    </string-array>
+
+    <string-array name="namauser_dummy">
+        <item>Novallino Hamid Kiapmajaya</item>
+        <item>Nurul Andini</item>
+        <item>Brian Yudhistira</item>
+        <item>Muhammad Rizki</item>
+        <item>Mohammad Labib Husain</item>
+    </string-array>
+
+    <string-array name="fpuser_dummy">
+        <item>https://media.licdn.com/dms/image/D5603AQGXN4dSSkAEUw/profile-displayphoto-shrink_200_200/0/1700664983937?e=1708560000&amp;v=beta&amp;t=-1pwu2ZeKTR-ty0w8GqRkl7tteFRk76mqbzphnh4yqM</item>
+        <item>https://media.licdn.com/dms/image/D5603AQGtSOGaPcnkAQ/profile-displayphoto-shrink_200_200/0/1674730757025?e=1708560000&amp;v=beta&amp;t=eh19Ouqach2FGjk4rd71Yy_ByUTm9ONneMTqk9qdLbY</item>
+        <item>https://media.licdn.com/dms/image/D5603AQHG96uTel2qZg/profile-displayphoto-shrink_200_200/0/1697353665896?e=1708560000&amp;v=beta&amp;t=pvuHtXg1dCXS5ITfMKEGkK01jAO15ia3YRaT71BEnjY</item>
+        <item>https://media.licdn.com/dms/image/D5635AQF62RyhoqYncw/profile-framedphoto-shrink_200_200/0/1699946849005?e=1703523600&amp;v=beta&amp;t=6B9-RvHgqZk8Fkjf2lnoRiGb5fJcppsHMIPTkjPItr8</item>
+        <item>https://media.licdn.com/dms/image/D5635AQGxvwimx3-BMQ/profile-framedphoto-shrink_200_200/0/1700819436326?e=1703523600&amp;v=beta&amp;t=PbErixvEEhnrqxpxTrwFtsznvn9XDqSGYQkLuNIGWdQ</item>
+    </string-array>
+
+    <string-array name="tanggal_dummy">
+        <item>1 Hari Yang Lalu</item>
+        <item>1 Hari Yang Lalu</item>
+        <item>1 Hari Yang Lalu</item>
+        <item>1 Hari Yang Lalu</item>
+        <item>1 Hari Yang Lalu</item>
+    </string-array>
+
+    <string-array name="descpost_dummy">
+        <item>Penggunaan teknologi oleh manusia dimulai dengan pengubahan sumber daya alam menjadi alat-alat sederhana. Penemuan prasejarah tentang kemampuan mengendalikan api telah menaikkan ketersediaan sumber-sumber pangan, sedangkan penciptaan roda telah membantu manusia dalam bepergian dan mengendalikan lingkungan mereka. Perkembangan teknologi terbaru, termasuk di antaranya mesin cetak, telepon, dan Internet.</item>
+        <item>Seni adalah keahlian membuat karya yang bermutu (dilihat dari segi kehalusannya, keindahannya, fungsinya, bentuknya, makna dari bentuknya, dan sebagainya), seperti tari, lukisan, ukiran.[1] Seni meliputi banyak kegiatan manusia dalam menciptakan karya visual, audio, atau pertunjukan yang mengungkapkan imajinasi, gagasan, atau keprigelan teknik pembuatnya, untuk dihargai keindahannya atau kekuatan emosinya..</item>
+        <item>Ilmu atau ilmu pengetahuan adalah suatu usaha sistematis dengan metode ilmiah dalam pengembangan dan penataan pengetahuan yang dibuktikan dengan penjelasan dan prediksi yang teruji sebagai pemahaman manusia tentang alam semesta dan dunianya. Segi-segi ini dibatasi agar dihasilkan rumusan-rumusan pasti</item>
+        <item>Komputasi awan atau komputasi gemawan adalah gabungan pemanfaatan teknologi komputer dan pengembangan berbasis Internet. Awan adalah metafora dari internet, sebagaimana awan yang sering digambarkan di diagram jaringan komputer.</item>
+        <item>Pada akhir tahun 2023 nanti, Bangkit akan melatih lebih dari 15.000 orang. Ini membuktikan bahwa program yang berada di bawah naungan Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi, dirancang khusus oleh Google, serta didukung penuh oleh GoTo dan Traveloka ini memiliki dampak yang masif terhadap calon talenta digital di Indonesia.</item>
     </string-array>
 </resources>

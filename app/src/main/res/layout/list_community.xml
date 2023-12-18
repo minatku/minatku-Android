@@ -1,114 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
+    android:orientation="vertical"
     android:layout_marginStart="8dp"
     android:layout_marginTop="4dp"
     android:layout_marginEnd="8dp"
-    android:layout_marginBottom="4dp"
-    card_view:cardCornerRadius="15dp" >
+    android:layout_marginBottom="4dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="357dp"
-        android:padding="8dp">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="15dp">
 
-        <ImageView
-            android:id="@+id/fp_user"
-            android:layout_width="83dp"
-            android:layout_height="81dp"
-            card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.051"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent"
-            card_view:layout_constraintVertical_bias="0.054"
-            tools:srcCompat="@tools:sample/avatars" />
-
-        <TextView
-            android:id="@+id/nama_user"
-            android:layout_width="wrap_content"
+        <!-- Main container using ConstraintLayout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="228dp"
-            android:text="@string/nama"
-            card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.333"
-            card_view:layout_constraintStart_toEndOf="@+id/fp_user"
-            card_view:layout_constraintTop_toTopOf="parent"
-            card_view:layout_constraintVertical_bias="0.065" />
+            android:background="#F9F9F9"
+            android:padding="16dp">
 
-        <TextView
-            android:id="@+id/tv_username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/username"
-            card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.07"
-            card_view:layout_constraintStart_toEndOf="@+id/nama_user"
-            card_view:layout_constraintTop_toTopOf="parent"
-            card_view:layout_constraintVertical_bias="0.065" />
+            <!-- User's profile image -->
+            <ImageView
+                android:id="@+id/fp_user"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                tools:srcCompat="@tools:sample/avatars"
+                android:scaleType="fitCenter"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_waktu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tanggal"
-            card_view:layout_constraintBottom_toTopOf="@+id/tv_descpost"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.025"
-            card_view:layout_constraintStart_toEndOf="@+id/fp_user"
-            card_view:layout_constraintTop_toBottomOf="@+id/nama_user"
-            card_view:layout_constraintVertical_bias="0.185" />
+            <TextView
+                android:id="@+id/nama_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/dmsans_18pt_bold"
+                android:text="@string/nama"
+                android:textColor="@color/black"
+                card_view:layout_constraintBottom_toTopOf="@+id/tv_usernamecom"
+                card_view:layout_constraintStart_toEndOf="@+id/fp_user" />
 
-        <TextView
-            android:id="@+id/tv_descpost"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/post"
-            card_view:layout_constraintBottom_toTopOf="@+id/iv_post1"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.043"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/fp_user"
-            card_view:layout_constraintVertical_bias="0.513" />
+            <TextView
+                android:id="@+id/tv_usernamecom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/dmsans_18pt_regular"
+                android:text="@string/username"
+                card_view:layout_constraintStart_toEndOf="@+id/fp_user"
+                card_view:layout_constraintBottom_toTopOf="@+id/tv_waktu"/>
 
-        <ImageView
-            android:id="@+id/iv_post1"
-            android:layout_width="203dp"
-            android:layout_height="134dp"
-            android:layout_marginStart="40dp"
-            card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/fp_user"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            <!-- Timestamp -->
+            <TextView
+                android:id="@+id/tv_waktu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/dmsans_18pt_regular"
+                android:text="@string/tanggal"
+                card_view:layout_constraintStart_toEndOf="@+id/fp_user"
+                card_view:layout_constraintBottom_toTopOf="@+id/tv_descpost" />
 
-        <ImageView
-            android:id="@+id/iv_post2"
-            android:layout_width="108dp"
-            android:layout_height="65dp"
-            card_view:layout_constraintBottom_toTopOf="@+id/iv_post3"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.555"
-            card_view:layout_constraintStart_toEndOf="@+id/iv_post1"
-            card_view:layout_constraintTop_toTopOf="parent"
-            card_view:layout_constraintVertical_bias="0.969"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
-
-        <ImageView
-            android:id="@+id/iv_post3"
-            android:layout_width="108dp"
-            android:layout_height="65dp"
-            android:layout_marginBottom="56dp"
-            card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.555"
-            card_view:layout_constraintStart_toEndOf="@+id/iv_post1"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.cardview.widget.CardView>
+            <!-- Post description -->
+            <TextView
+                android:id="@+id/tv_descpost"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsans_18pt_regular"
+                android:text="@string/post"
+                android:textColor="@color/black"
+                android:textAlignment="viewStart"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/fp_user"
+                android:paddingTop="10dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
