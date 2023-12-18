@@ -11,21 +11,21 @@
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginTop="10dp"
+        android:hint="@string/masukkan_kata"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:strokeColor="@color/black"
         app:strokeWidth="1dp" />
 
-    <androidx.appcompat.widget.SearchView
+    <com.google.android.material.search.SearchView
         android:id="@+id/searchview"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/search_bar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_modul"

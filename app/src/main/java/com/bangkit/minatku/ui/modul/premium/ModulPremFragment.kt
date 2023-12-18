@@ -7,26 +7,56 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.minatku.Data.Modul_Dummy
 import com.bangkit.minatku.R
+import com.bangkit.minatku.databinding.FragmentModulPremBinding
 import com.bangkit.minatku.ui.modul.premium.detail_modul.Detail_Modul
 
+
 class ModulPremFragment : Fragment() {
-    private lateinit var listAdapter: RecyclerView
-    private val list = ArrayList<Modul_Dummy>()
+    private lateinit var binding: FragmentModulPremBinding
+    private val fullList = ArrayList<Modul_Dummy>()
+    private val displayedList = ArrayList<Modul_Dummy>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_modul_prem, container, false)
+        binding = FragmentModulPremBinding.inflate(inflater, container, false)
 
-        listAdapter = view.findViewById(R.id.list_modul)
-        listAdapter.setHasFixedSize(true)
-        list.addAll(getlist())
-        showRecyclerList()
+        binding.listModul.apply {
+            setHasFixedSize(true)
+            layoutManager = LinearLayoutManager(requireContext())
+        }
 
-        return view
+        fullList.addAll(getlist())
+        displayedList.addAll(fullList)
+        showRecyclerList(displayedList)
+
+        binding.apply{
+            searchview.setupWithSearchBar(searchBar)
+            searchview
+                .editText
+                .setOnEditorActionListener { textView, actionid, event ->
+                    searchBar.setText(searchview.text)
+                    searchview.hide()
+                    search(searchview.text.toString())
+                    false
+                }
+        }
+
+        return binding.root
+    }
+
+    private fun search(query: String) {
+        val filteredList = ArrayList<Modul_Dummy>()
+
+        for (modul in fullList) {
+            if (modul.judul.toLowerCase().contains(query.toLowerCase())) {
+                filteredList.add(modul)
+            }
+        }
+        showRecyclerList(filteredList)
     }
 
     private fun getlist(): ArrayList<Modul_Dummy>{
@@ -42,12 +72,11 @@ class ModulPremFragment : Fragment() {
         return list
     }
 
-    private fun showRecyclerList() {
-        listAdapter.layoutManager = LinearLayoutManager(requireContext())
-        val listmodulAdapter = ModulAdapter(list)
-        listAdapter.adapter = listmodulAdapter
+    private fun showRecyclerList(modulList: ArrayList<Modul_Dummy>) {
+        val listModulAdapter = ModulAdapter(modulList)
+        binding.listModul.adapter = listModulAdapter
 
-        listmodulAdapter.setOnItemClickCallback(object : ModulAdapter.OnItemClickCallback {
+        listModulAdapter.setOnItemClickCallback(object : ModulAdapter.OnItemClickCallback {
             override fun onItemClicked(data: Modul_Dummy) {
                 showSelectedModul(data)
             }
@@ -61,4 +90,5 @@ class ModulPremFragment : Fragment() {
         movedata.putExtra(Detail_Modul.EXTRA_PICT, modulDummy.img)
         startActivity(movedata)
     }
+
 }

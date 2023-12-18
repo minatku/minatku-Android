@@ -61,6 +61,7 @@
     <string name="home">Home</string>
     <string name="tagline">MinatKu siap membantu kamu mengatasi masalah minat dan bakatmu :)</string>
     <string name="minat_dan_bakatmu">Minat Dan Bakatmu</string>
+    <string name="masukkan_kata">Masukkan kata</string>
     <string-array name="judul_dummy">
         <item>Informatika</item>
         <item>Matematika</item>
