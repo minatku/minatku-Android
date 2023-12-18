@@ -137,7 +137,7 @@
                 android:padding="10dp"
                 android:fontFamily="@font/dmsans_18pt_bold"
                 android:textSize="20sp"
-                android:text="Hasil Asesmen"
+                android:text="@string/hasil_asesmen"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white" />
 
@@ -148,7 +148,7 @@
                 android:padding="10dp"
                 android:textSize="16sp"
                 android:fontFamily="@font/dmsans_18pt_regular"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                android:text="@string/lorem"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"/>
         </androidx.cardview.widget.CardView>
