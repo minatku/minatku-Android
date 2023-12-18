@@ -41,7 +41,7 @@
     <View
         android:id="@+id/bg_whiteforbtn"
         android:layout_width="411dp"
-        android:layout_height="109dp"
+        android:layout_height="100dp"
         android:background="@drawable/rounded_corner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,14 +52,17 @@
 
     <Button
         android:id="@+id/btn_starttest"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded"
         android:backgroundTint="@color/blue"
         android:fontFamily="@font/dm_sans_bold"
         android:text="@string/ikuti_tes"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/bg_whiteforbtn"
         app:layout_constraintEnd_toEndOf="@+id/bg_whiteforbtn"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/bg_whiteforbtn"
-        app:layout_constraintTop_toTopOf="@+id/bg_whiteforbtn" />
+        app:layout_constraintTop_toTopOf="@+id/bg_whiteforbtn"
+        app:layout_constraintVertical_bias="0.64" />
 </androidx.constraintlayout.widget.ConstraintLayout>
