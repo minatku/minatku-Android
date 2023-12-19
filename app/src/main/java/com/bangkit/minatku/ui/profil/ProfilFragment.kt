@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bangkit.minatku.databinding.FragmentProfilBinding
 import com.bangkit.minatku.ui.editprofil.EditProfilActivity
+import com.bangkit.minatku.ui.login.LoginActivity
 
 class ProfilFragment : Fragment() {
 
@@ -23,10 +24,19 @@ class ProfilFragment : Fragment() {
         _binding = FragmentProfilBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        // Set a click listener for the button using ViewBinding
+        // Set a click listener for the Edit button using ViewBinding
         binding.btnEdit.setOnClickListener {
-            // Start the EditProfilActivity when the button is clicked
+            // Start the EditProfilActivity when the Edit button is clicked
             val intent = Intent(activity, EditProfilActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Set a click listener for the Logout button using ViewBinding
+        binding.btnLogout.setOnClickListener {
+            // Start the LoginActivity when the Logout button is clicked
+            val intent = Intent(activity, LoginActivity::class.java)
+            // Add flags to clear the back stack and start a new task
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
 
