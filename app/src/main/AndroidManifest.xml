@@ -28,7 +28,7 @@
             android:name=".ui.community.MTActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.assesment.AssesmentActivity"
+            android:name=".ui.assesment.AssessmentActivity"
             android:exported="false" />
         <activity
             android:name=".ui.starttest.StartTestActivity"
