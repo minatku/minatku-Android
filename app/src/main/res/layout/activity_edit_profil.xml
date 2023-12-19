@@ -109,7 +109,7 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:alpha="100">
 
-        <com.bangkit.minatku.Custom.EmailValidator
+        <com.bangkit.minatku.custom.EmailValidator
             android:id="@+id/ed_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

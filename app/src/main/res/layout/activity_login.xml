@@ -83,7 +83,7 @@
         app:startIconDrawable="@drawable/ic_email"
         tools:alpha="100">
 
-        <com.bangkit.minatku.Custom.EmailValidator
+        <com.bangkit.minatku.custom.EmailValidator
             android:id="@+id/ed_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -112,7 +112,7 @@
         app:startIconDrawable="@drawable/ic_lock"
         tools:alpha="100">
 
-        <com.bangkit.minatku.Custom.PasswordValidator
+        <com.bangkit.minatku.custom.PasswordValidator
             android:id="@+id/ed_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

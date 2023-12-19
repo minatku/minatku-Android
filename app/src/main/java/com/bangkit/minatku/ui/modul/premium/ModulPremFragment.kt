@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bangkit.minatku.Data.Modul_Dummy
+import com.bangkit.minatku.data.response.Modul_Dummy
 import com.bangkit.minatku.R
 import com.bangkit.minatku.databinding.FragmentModulPremBinding
 import com.bangkit.minatku.ui.modul.premium.detail_modul.Detail_Modul

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bangkit.minatku.Data.Modul_Dummy
+import com.bangkit.minatku.data.response.Modul_Dummy
 import com.bangkit.minatku.R
 import com.bumptech.glide.Glide
 

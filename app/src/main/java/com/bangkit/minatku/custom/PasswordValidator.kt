@@ -1,4 +1,4 @@
-package com.bangkit.minatku.Custom
+package com.bangkit.minatku.custom
 
 import android.content.Context
 import android.text.Editable
