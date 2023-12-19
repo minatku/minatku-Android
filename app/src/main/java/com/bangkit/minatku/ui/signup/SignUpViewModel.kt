@@ -15,11 +15,11 @@ class SignUpViewModel(private val minatkuRepository: MinatkuRepository) : ViewMo
     private val _registrationResult = MutableLiveData<Hasil<RegisterResponse>>()
     val registrationResult: LiveData<Hasil<RegisterResponse>> get() = _registrationResult
 
-    fun register(name: String, email: String, nama_lengkap:String ,password: String) {
+    fun register(username: String, nama_lengkap:String ,email: String, password: String) {
         _registrationResult.value = Hasil.Loading
 
         viewModelScope.launch {
-            val result = minatkuRepository.register(name, email, nama_lengkap, password)
+            val result = minatkuRepository.register(username, nama_lengkap, email,  password)
             _registrationResult.value = result
         }
     }

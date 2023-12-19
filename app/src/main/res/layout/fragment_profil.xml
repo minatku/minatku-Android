@@ -12,12 +12,16 @@
         android:id="@+id/btn_logout"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_logout"
-        android:background="?android:attr/selectableItemBackground"
-        android:contentDescription="@string/logout"
+        android:alpha="100"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"/>
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/logout"
+        android:background="@color/base_page"
+        android:src="@drawable/ic_logout" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -242,14 +246,13 @@
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/iv_user"
-                android:layout_width="97dp"
-                android:layout_height="97dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 app:layout_constraintBottom_toTopOf="@+id/tt_username"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintVertical_bias="0.54"
                 app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
-                tools:alpha="100"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView

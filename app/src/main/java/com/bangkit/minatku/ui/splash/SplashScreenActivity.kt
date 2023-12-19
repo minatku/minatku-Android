@@ -6,7 +6,7 @@ import android.content.Intent
 import android.os.Handler
 import android.os.Looper
 import com.bangkit.minatku.databinding.ActivitySplashScreenBinding
-import com.bangkit.minatku.ui.welcome.WelcomeActivity
+import com.bangkit.minatku.ui.navbar.NavbarActivity
 
 class SplashScreenActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashScreenBinding
@@ -20,7 +20,7 @@ class SplashScreenActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this@SplashScreenActivity, WelcomeActivity::class.java))
+            startActivity(Intent(this@SplashScreenActivity, NavbarActivity::class.java))
             finish()
         }, splashScreen)
     }
