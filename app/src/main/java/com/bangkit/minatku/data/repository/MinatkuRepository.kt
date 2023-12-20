@@ -82,8 +82,15 @@ class MinatkuRepository private constructor(
     ): Hasil<UserUpdate> {
         Hasil.Loading
         return try {
-            val session = UpdateUser(username, nama_lengkap, tgl_lahir, gender, no_telp, lokasi)
-            val response = apiService.updateUser(id,session)
+            val session = UpdateUser(
+                username,
+                nama_lengkap,
+                tgl_lahir,
+                gender,
+                no_telp,
+                lokasi
+            )
+            val response = apiService.updateUser(id, session)
 
             if (response.error == true) {
                 Hasil.Error(response.message ?: "Unknown error")
@@ -94,10 +101,11 @@ class MinatkuRepository private constructor(
         } catch (e: HttpException) {
             val jsonInString = e.response()?.errorBody()?.string()
             val errorBody = Gson().fromJson(jsonInString, ErrorResponse::class.java)
-            val errorMessage = errorBody.message
-            Hasil.Error(errorMessage.toString())
+            val errorMessage = errorBody?.message ?: "Unknown error"
+            Hasil.Error(errorMessage)
         }
     }
+
 
     suspend fun login(email: String, password: String): Hasil<LoginResponse> {
         Hasil.Loading
@@ -128,19 +136,20 @@ class MinatkuRepository private constructor(
     }
 
     suspend fun detail(id: Int): Hasil<Response> {
-        Hasil.Loading
         return try {
             val response = apiService.user(id)
             if (response.error == true) {
-                Hasil.Error(response.message)
+                Hasil.Error(response.message ?: "Unknown error")
             } else {
+                val userData = response.userData
+
                 val session = UserDetail(
-                    tgl_lahir = response.userData.tanggalLahir,
-                    gender = response.userData.gender,
-                    lokasi = response.userData.lokasi,
-                    fotoPP = response.userData.fotoProfil,
-                    name_lengkap = response.userData.namaLengkap,
-                    no_telp = response.userData.noTelepon
+                    tgl_lahir = userData?.tanggalLahir.orEmpty(),
+                    gender = userData?.gender.orEmpty(),
+                    lokasi = userData?.lokasi.orEmpty(),
+                    fotoPP = userData?.fotoProfil.orEmpty(),
+                    name_lengkap = userData?.namaLengkap.orEmpty(),
+                    no_telp = userData?.noTelepon.orEmpty()
                 )
                 saveDetail(session)
                 Hasil.Success(response)
@@ -149,8 +158,8 @@ class MinatkuRepository private constructor(
         } catch (e: HttpException) {
             val jsonInString = e.response()?.errorBody()?.string()
             val errorBody = Gson().fromJson(jsonInString, ErrorResponse::class.java)
-            val errorMessage = errorBody.message
-            Hasil.Error(errorMessage.toString())
+            val errorMessage = errorBody?.message ?: "Unknown error"
+            Hasil.Error(errorMessage)
         }
     }
 

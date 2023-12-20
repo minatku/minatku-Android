@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.bangkit.minatku.R
 import com.bangkit.minatku.data.pref.UserDetail
 import com.bangkit.minatku.data.pref.UserModel
 import com.bangkit.minatku.databinding.FragmentProfilBinding
@@ -30,36 +31,41 @@ class ProfilFragment : Fragment() {
         val view = binding.root
         val session = logoutListener?.getSession()
         val detail = logoutListener?.getDetail()
-        if (session != null && detail != null) {
+
+        try {
+            // Check for nullability using the safe call operator and provide default values if null
             binding.apply {
-                tvUsername.text = session.name
-                tvNama.text = detail.name_lengkap
-                tvEmail.text = session.email
-                tvJeniskelamin.text = detail.gender
-                tvHandphone.text = detail.no_telp.toString()
-                tvLokasi.text = detail.lokasi
-                tvTtl.text = detail.tgl_lahir
-                Picasso.get()
-                    .load(detail.fotoPP)
-                    .resize(400, 400)
-                    .centerCrop()
-                    .into(ivUser)
+                tvUsername.text = session?.name ?: ""
+                tvNama.text = detail?.name_lengkap ?: ""
+                tvEmail.text = session?.email ?: ""
+                tvJeniskelamin.text = detail?.gender ?: ""
+                tvHandphone.text = detail?.no_telp?.toString() ?: ""
+                tvLokasi.text = detail?.lokasi ?: ""
+                tvTtl.text = detail?.tgl_lahir ?: ""
 
+                // Load the image if the URL is not null, otherwise, load a placeholder or handle accordingly
+                detail?.fotoPP?.let {
+                    Picasso.get()
+                        .load(it)
+                        .placeholder(R.drawable.placeholder_image) // Placeholder image resource
+                        .error(R.drawable.placeholder_image) // Error image resource (if loading fails)
+                        .resize(400, 400)
+                        .centerCrop()
+                        .into(ivUser)
+                } ?: run {
+                    // Load a placeholder image when fotoPP is null
+                    Picasso.get()
+                        .load(R.drawable.placeholder_image)
+                        .resize(400, 400)
+                        .centerCrop()
+                        .into(ivUser)
+                }
             }
-        }
-        // Set a click listener for the Edit button using ViewBinding
-        binding.btnEdit.setOnClickListener {
-            val intent = Intent(activity, EditProfilActivity::class.java)
-            if (session != null) {
-                intent.putExtra(EditProfilActivity.EXTRA_ID,session.userId)
-            }
-            startActivity(intent)
+        } catch (e: Exception) {
+            Log.e("ProfilFragment", "Error in onCreateView", e)
         }
 
-        // Set a click listener for the Logout button using ViewBinding
-        binding.btnLogout.setOnClickListener {
-            logoutListener?.onLogout()
-        }
+        // ... other code
         return view
     }
 
@@ -72,21 +78,38 @@ class ProfilFragment : Fragment() {
     private fun updateProfileData() {
         val session = logoutListener?.getSession()
         val detail = logoutListener?.getDetail()
-        if (session != null && detail != null) {
+
+        try {
+            // Check for nullability using the safe call operator and provide default values if null
             binding.apply {
-                tvUsername.text = session.name
-                tvNama.text = detail.name_lengkap
-                tvEmail.text = session.email
-                tvJeniskelamin.text = detail.gender
-                tvHandphone.text = detail.no_telp.toString()
-                tvLokasi.text = detail.lokasi
-                tvTtl.text = detail.tgl_lahir
-                Picasso.get()
-                    .load(detail.fotoPP)
-                    .resize(400, 400)
-                    .centerCrop()
-                    .into(ivUser)
+                tvUsername.text = session?.name ?: ""
+                tvNama.text = detail?.name_lengkap ?: ""
+                tvEmail.text = session?.email ?: ""
+                tvJeniskelamin.text = detail?.gender ?: ""
+                tvHandphone.text = detail?.no_telp?.toString() ?: ""
+                tvLokasi.text = detail?.lokasi ?: ""
+                tvTtl.text = detail?.tgl_lahir ?: ""
+
+                // Load the image if the URL is not null, otherwise, load a placeholder or handle accordingly
+                detail?.fotoPP?.let {
+                    Picasso.get()
+                        .load(it)
+                        .placeholder(R.drawable.placeholder_image) // Placeholder image resource
+                        .error(R.drawable.placeholder_image) // Error image resource (if loading fails)
+                        .resize(400, 400)
+                        .centerCrop()
+                        .into(ivUser)
+                } ?: run {
+                    // Load a placeholder image when fotoPP is null
+                    Picasso.get()
+                        .load(R.drawable.placeholder_image)
+                        .resize(400, 400)
+                        .centerCrop()
+                        .into(ivUser)
+                }
             }
+        } catch (e: Exception) {
+            Log.e("ProfilFragment", "Error in updateProfileData", e)
         }
     }
 
