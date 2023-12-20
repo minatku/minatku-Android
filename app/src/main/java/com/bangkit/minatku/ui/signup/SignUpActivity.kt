@@ -62,7 +62,7 @@ class SignUpActivity : AppCompatActivity() {
                     is Hasil.Error -> {
                         showLoading(false)
                         // Lakukan sesuatu dengan hasil error
-                        val errorMessage: String = result.error
+                        val errorMessage: String? = result.error
                         // Tampilkan pesan error atau lakukan sesuatu dengan pesan error
                         AlertDialog.Builder(this).apply {
                             setTitle("OOPS")

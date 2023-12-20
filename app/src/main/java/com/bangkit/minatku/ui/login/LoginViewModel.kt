@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.bangkit.minatku.data.Hasil
 import com.bangkit.minatku.data.repository.MinatkuRepository
 import com.bangkit.minatku.data.response.LoginResponse
+import com.bangkit.minatku.data.response.Response
 import kotlinx.coroutines.launch
 
 class LoginViewModel(private val storyRepository: MinatkuRepository) : ViewModel() {

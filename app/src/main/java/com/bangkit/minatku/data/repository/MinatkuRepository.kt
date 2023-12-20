@@ -1,12 +1,14 @@
 package com.bangkit.minatku.data.repository
 
 import com.bangkit.minatku.data.Hasil
+import com.bangkit.minatku.data.pref.UserDetail
 import com.bangkit.minatku.data.pref.UserModel
 import com.bangkit.minatku.data.pref.UserPreference
 import com.bangkit.minatku.data.response.AsessmentResponse
 import com.bangkit.minatku.data.response.ErrorResponse
 import com.bangkit.minatku.data.response.LoginResponse
 import com.bangkit.minatku.data.response.RegisterResponse
+import com.bangkit.minatku.data.response.Response
 import com.bangkit.minatku.data.retrofit.ApiConfig
 import com.bangkit.minatku.data.retrofit.ApiService
 import com.bangkit.minatku.data.retrofit.LoginRequest
@@ -25,8 +27,16 @@ class MinatkuRepository private constructor(
         userPreference.saveSession(user)
     }
 
+    suspend fun saveDetail(user: UserDetail) {
+        userPreference.saveDetail(user)
+    }
+
     fun getSession(): Flow<UserModel> {
         return userPreference.getSession()
+    }
+
+    fun getDetail(): Flow<UserDetail> {
+        return userPreference.getDetail()
     }
 
     suspend fun logout() {
@@ -69,6 +79,26 @@ class MinatkuRepository private constructor(
                 Hasil.Success(response)
             }
         } catch (e: HttpException) {
+            val jsonInString = e.response()?.errorBody()?.string()
+            val errorBody = Gson().fromJson(jsonInString, ErrorResponse::class.java)
+            val errorMessage = errorBody.message
+            Hasil.Error(errorMessage.toString())
+        }
+    }
+
+    suspend fun detail(id: Int):Hasil<Response>{
+        Hasil.Loading
+        return try {
+            val response = apiService.user(id)
+            if (response.error == true) {
+                Hasil.Error(response.message)
+            } else {
+                val session = UserDetail(tgl_lahir = response.userData.tanggalLahir, gender = response.userData.gender , lokasi = response.userData.lokasi, fotoPP = response.userData.fotoProfil, name_lengkap = response.userData.namaLengkap, no_telp = response.userData.noTelepon)
+                saveDetail(session)
+                Hasil.Success(response)
+            }
+
+        }catch (e: HttpException){
             val jsonInString = e.response()?.errorBody()?.string()
             val errorBody = Gson().fromJson(jsonInString, ErrorResponse::class.java)
             val errorMessage = errorBody.message

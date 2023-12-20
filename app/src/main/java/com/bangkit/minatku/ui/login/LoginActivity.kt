@@ -10,7 +10,6 @@ import com.bangkit.minatku.data.Hasil
 import com.bangkit.minatku.data.ViewModelFactory
 import com.bangkit.minatku.data.response.LoginResponse
 import com.bangkit.minatku.databinding.ActivityLoginBinding
-import com.bangkit.minatku.ui.assesment.AssessmentActivity
 import com.bangkit.minatku.ui.navbar.NavbarActivity
 import com.bangkit.minatku.ui.signup.SignUpActivity
 
@@ -40,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
             viewModel.loginResult.observe(this) { result ->
                 tunjukkanLoading(false)
                 when (result) {
-                    is Hasil.Error -> showErrorMessage(result.error)
+                    is Hasil.Error -> result.error?.let { it1 -> showErrorMessage(it1) }
                     is Hasil.Success -> showSuccessMessage(result.data)
                     is Hasil.Loading -> tunjukkanLoading(true)
                 }
@@ -55,7 +54,7 @@ class LoginActivity : AppCompatActivity() {
             setTitle("Mantap")
             setMessage(response.message)
             setPositiveButton("OK") { _, _ ->
-                val intent = Intent(this@LoginActivity, AssessmentActivity::class.java)
+                val intent = Intent(this@LoginActivity, NavbarActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(intent)
                 finish()
