@@ -3,6 +3,7 @@ package com.bangkit.minatku.data.repository
 import com.bangkit.minatku.data.Hasil
 import com.bangkit.minatku.data.pref.UserModel
 import com.bangkit.minatku.data.pref.UserPreference
+import com.bangkit.minatku.data.response.AsessmentResponse
 import com.bangkit.minatku.data.response.ErrorResponse
 import com.bangkit.minatku.data.response.LoginResponse
 import com.bangkit.minatku.data.response.RegisterResponse
@@ -75,6 +76,22 @@ class MinatkuRepository private constructor(
         }
     }
 
+    suspend fun submitAssessment(answers: List<Int>): Boolean {
+        return try {
+            val response = apiService.submitAssessment(answers)
+            response.error == true // Use safe call operator
+        } catch (e: Exception) {
+            throw e
+        }
+    }
+
+    suspend fun getQuestions(): AsessmentResponse {
+        return try {
+            apiService.getQuestions()
+        } catch (e: Exception) {
+            throw e
+        }
+    }
 
     companion object {
         @Volatile
