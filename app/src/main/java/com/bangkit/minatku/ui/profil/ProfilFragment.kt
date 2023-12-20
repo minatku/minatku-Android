@@ -25,15 +25,12 @@ class ProfilFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Initialize the binding
         _binding = FragmentProfilBinding.inflate(inflater, container, false)
-
         val view = binding.root
         val session = logoutListener?.getSession()
         val detail = logoutListener?.getDetail()
 
         try {
-            // Check for nullability using the safe call operator and provide default values if null
             binding.apply {
                 tvUsername.text = session?.name ?: ""
                 tvNama.text = detail?.name_lengkap ?: ""
@@ -43,29 +40,39 @@ class ProfilFragment : Fragment() {
                 tvLokasi.text = detail?.lokasi ?: ""
                 tvTtl.text = detail?.tgl_lahir ?: ""
 
-                // Load the image if the URL is not null, otherwise, load a placeholder or handle accordingly
-                detail?.fotoPP?.let {
+                detail?.fotoPP?.takeIf { it.isNotBlank() }?.let {
                     Picasso.get()
                         .load(it)
-                        .placeholder(R.drawable.placeholder_image) // Placeholder image resource
-                        .error(R.drawable.placeholder_image) // Error image resource (if loading fails)
+                        .placeholder(R.drawable.placeholder_image)
+                        .error(R.drawable.placeholder_image)
                         .resize(400, 400)
                         .centerCrop()
                         .into(ivUser)
                 } ?: run {
-                    // Load a placeholder image when fotoPP is null
                     Picasso.get()
                         .load(R.drawable.placeholder_image)
                         .resize(400, 400)
                         .centerCrop()
                         .into(ivUser)
                 }
+
+                // Set click listeners for the buttons
+                btnEdit.setOnClickListener {
+                    val intent = Intent(activity, EditProfilActivity::class.java)
+                    session?.userId?.let { userId ->
+                        intent.putExtra(EditProfilActivity.EXTRA_ID, userId)
+                    }
+                    startActivity(intent)
+                }
+
+                btnLogout.setOnClickListener {
+                    logoutListener?.onLogout()
+                }
             }
         } catch (e: Exception) {
             Log.e("ProfilFragment", "Error in onCreateView", e)
         }
 
-        // ... other code
         return view
     }
 
