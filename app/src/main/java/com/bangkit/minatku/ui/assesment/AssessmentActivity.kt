@@ -75,6 +75,34 @@ class AssessmentActivity : AppCompatActivity() {
         // Set click listeners for navigation buttons
         binding.nextButton.setOnClickListener { onNextClicked() }
         binding.backButton.setOnClickListener { onBackClicked() }
+
+        viewModel.getQuestions()
+
+        // Display the first question
+        viewModel.questions.observe(this, Observer { result ->
+            if (result is Hasil.Success) {
+                updateQuestion(result.data.firstOrNull())
+                updateNextButton(result.data.size > 1)
+            }
+        })
+    }
+
+    private fun onNextClicked() {
+        // Fetch the next question when the Next button is clicked
+        viewModel.getNextQuestion()
+
+        // Display the updated question
+        viewModel.currentQuestion.observe(this, Observer { result ->
+            if (result is Hasil.Success) {
+                updateQuestion(result.data)
+                updateNextButton(true)
+            }
+        })
+
+        // Update the UI with the current question ID
+        val currentQuestionId = viewModel.getCurrentQuestionId()
+        // Handle the logic to update UI based on currentQuestionId
+        // For example, you can update a TextView to display the current question ID.
     }
 
     private fun onOptionSelected(option: Int) {
@@ -104,10 +132,6 @@ class AssessmentActivity : AppCompatActivity() {
         button.setTextColor(ContextCompat.getColor(this, textColor))
     }
 
-    private fun onNextClicked() {
-        // Fetch the next question when the Next button is clicked
-        viewModel.getNextQuestion()
-    }
 
     private fun onBackClicked() {
         // Handle the Back button click if needed

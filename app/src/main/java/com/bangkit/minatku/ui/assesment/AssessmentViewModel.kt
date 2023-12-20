@@ -61,6 +61,13 @@ class AssessmentViewModel(private val repository: MinatkuRepository) : ViewModel
         selectedOptions.add(currentQuestionIndex, option)
     }
 
+
+    private var currentQuestionId: Int = 1
+
+    private fun updateCurrentQuestionId(id: Int) {
+        currentQuestionId = id
+    }
+
     fun getNextQuestion() {
         val hasil = _questions.value
 
@@ -71,6 +78,7 @@ class AssessmentViewModel(private val repository: MinatkuRepository) : ViewModel
                 currentQuestionIndex++
                 val nextQuestion = hasil.data[currentQuestionIndex]
                 _currentQuestion.value = Hasil.Success(nextQuestion)
+                updateCurrentQuestionId(nextQuestion.idPertanyaan ?: 0)
             } else {
                 // If there are no more questions, submit the assessment
                 submitAssessment(selectedOptions)
@@ -82,6 +90,10 @@ class AssessmentViewModel(private val repository: MinatkuRepository) : ViewModel
         } else {
             // Handle the case where _questions.value is null
         }
+    }
+
+    fun getCurrentQuestionId(): Int {
+        return currentQuestionId
     }
 
 
