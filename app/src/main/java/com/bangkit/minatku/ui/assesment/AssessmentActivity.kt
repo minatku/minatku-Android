@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
+import com.bangkit.minatku.R
 import com.bangkit.minatku.data.Hasil
 import com.bangkit.minatku.data.ViewModelFactory
 import com.bangkit.minatku.data.response.PertanyaanDataItem
@@ -78,16 +79,16 @@ class AssessmentActivity : AppCompatActivity() {
         // Update ViewModel with the selected option
         viewModel.updateSelectedOption(option)
 
-        // Reset background color for all buttons
-        binding.option1Button.setBackgroundResource(android.R.drawable.btn_default)
-        binding.option2Button.setBackgroundResource(android.R.drawable.btn_default)
-        binding.option3Button.setBackgroundResource(android.R.drawable.btn_default)
+        // Reset background color for all buttonsc 
+        binding.option1Button.setBackgroundResource(R.drawable.button_default)
+        binding.option2Button.setBackgroundResource(R.drawable.button_default)
+        binding.option3Button.setBackgroundResource(R.drawable.button_default)
 
         // Set background color for the selected button
         when (option) {
-            0 -> binding.option1Button.setBackgroundColor(ContextCompat.getColor(this, android.R.color.holo_red_light))
-            1 -> binding.option2Button.setBackgroundColor(ContextCompat.getColor(this, android.R.color.holo_red_light))
-            2 -> binding.option3Button.setBackgroundColor(ContextCompat.getColor(this, android.R.color.holo_red_light))
+            0 -> binding.option1Button.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
+            1 -> binding.option2Button.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
+            2 -> binding.option3Button.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
         }
     }
 

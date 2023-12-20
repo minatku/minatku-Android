@@ -63,7 +63,7 @@ class MinatkuRepository private constructor(
             if (response.error == true) {
                 Hasil.Error(response.message)
             } else {
-                val session = UserModel(name = response.loginResult.username, email = email, token = response.loginResult.token, isLogin = true)
+                val session = UserModel(name = response.loginResult.username, email = email, token = response.loginResult.token, isLogin = true, userId = response.loginResult.userId)
                 saveSession(session)
                 ApiConfig.token = response.loginResult.token
                 Hasil.Success(response)

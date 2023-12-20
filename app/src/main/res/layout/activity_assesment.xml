@@ -45,16 +45,17 @@
         android:orientation="vertical"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_weight="1">
+        android:layout_marginEnd="16dp">
 
         <Button
             android:id="@+id/option1Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="25sp"
+            android:textColor="@color/white"
             android:fontFamily="@font/dmsans_18pt_bold"
-            android:text="@string/dislike" />
+            android:text="@string/dislike"
+            android:background="@drawable/button_default" />
 
         <Button
             android:id="@+id/option2Button"
@@ -62,8 +63,10 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/dmsans_18pt_bold"
             android:textSize="25sp"
+            android:textColor="@color/white"
             android:layout_marginTop="16dp"
-            android:text="@string/enjoy" />
+            android:text="@string/enjoy"
+            android:background="@drawable/button_default" />
 
         <Button
             android:id="@+id/option3Button"
@@ -71,8 +74,11 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/dm_sans_bold"
             android:textSize="25sp"
+            android:textColor="@color/white"
             android:layout_marginTop="16dp"
-            android:text="@string/netral" />
+            android:text="@string/netral"
+            android:background="@drawable/button_default" />
+
 
     </LinearLayout>
 
