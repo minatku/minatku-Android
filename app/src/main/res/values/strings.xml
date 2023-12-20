@@ -71,6 +71,8 @@
     <string name="dislike">Dislike</string>
     <string name="enjoy">Enjoy</string>
     <string name="netral">Netral</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
     <string-array name="judul_dummy">
         <item>Informatika</item>
         <item>Matematika</item>
