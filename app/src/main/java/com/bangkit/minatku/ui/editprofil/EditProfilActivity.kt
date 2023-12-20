@@ -1,5 +1,6 @@
 package com.bangkit.minatku.ui.editprofil
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -9,6 +10,7 @@ import com.bangkit.minatku.data.Hasil
 import com.bangkit.minatku.data.ViewModelFactory
 import com.bangkit.minatku.data.response.UserUpdate
 import com.bangkit.minatku.databinding.ActivityEditProfilBinding
+import com.bangkit.minatku.ui.navbar.NavbarActivity
 
 class EditProfilActivity : AppCompatActivity() {
 
@@ -64,7 +66,9 @@ class EditProfilActivity : AppCompatActivity() {
                                 setTitle("Yeah!")
                                 setMessage(response.message)
                                 setPositiveButton("Lanjut") { _, _ ->
-                                    finish()
+                                    val intent = Intent(this@EditProfilActivity, NavbarActivity::class.java)
+                                    intent.putExtra("replaceFragment", "ProfileFragment") // Pass the fragment identifier or any relevant data
+                                    startActivity(intent)
                                 }
                                 create()
                                 show()

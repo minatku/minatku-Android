@@ -2,7 +2,6 @@ package com.bangkit.minatku.ui.navbar
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -47,20 +46,24 @@ class NavbarActivity : AppCompatActivity(), ProfilFragment.LogoutListener {
             when (item.itemId) {
                 R.id.NavHome -> {
                     updateData()
-                    replaceFragment(HomeFragment())
+                    replaceFragment(HomeFragment.newInstance(name, foto))
                 }
+
                 R.id.NavCommunity -> {
                     updateData()
                     replaceFragment(CommunityFragment())
                 }
+
                 R.id.NavProfile -> {
                     updateData()
                     replaceFragment(ProfilFragment().apply { setLogoutListener(this@NavbarActivity) })
                 }
+
                 R.id.NavModul -> {
                     updateData()
                     replaceFragment(ModulPremFragment())
                 }
+
                 R.id.NavMentor -> {
                     updateData()
                     replaceFragment(MentorFragment())
@@ -80,20 +83,36 @@ class NavbarActivity : AppCompatActivity(), ProfilFragment.LogoutListener {
                 finish()
             }
         }
-        viewModel.getDetail().observe(this) { user ->
-            currentUserDetail = user
-            gender = user.gender
-            foto = user.fotoPP
-            name_lengkap = user.name_lengkap
-            no = user.no_telp
-            tgl = user.tgl_lahir
-            lok = user.lokasi
+        viewModel.getDetail().observe(this) { tes ->
+            currentUserDetail = tes
+            gender = tes.gender
+            foto = tes.fotoPP
+            name_lengkap = tes.name_lengkap
+            no = tes.no_telp
+            tgl = tes.tgl_lahir
+            lok = tes.lokasi
         }
-        replaceFragment(HomeFragment())
+
+        if (intent.hasExtra("replaceFragment")) {
+            val fragmentToReplace = intent.getStringExtra("replaceFragment")
+            when (fragmentToReplace) {
+                "ProfileFragment" -> replaceFragment(ProfilFragment().apply {
+                    setLogoutListener(this@NavbarActivity)
+                })
+            }
+        } else {
+            viewModel.getDetail().observe(this) { userDetail ->
+                val photoPath = userDetail.fotoPP
+                val name = userDetail.name_lengkap
+
+                val homeFragment = HomeFragment.newInstance(name, photoPath)
+                replaceFragment(homeFragment)
+            }
+        }
     }
 
     private fun updateData() {
-        viewModel.detailResult.observe(this){
+        viewModel.detailResult.observe(this) {
 
         }
         viewModel.getSession().observe(this) { user ->

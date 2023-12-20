@@ -26,12 +26,12 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
 
     suspend fun saveDetail(user: UserDetail){
         dataStore.edit { preferences ->
-            preferences[TGL_LAHIR] = user.tgl_lahir.toString()
+            preferences[TGL_LAHIR] = user.tgl_lahir
             preferences[NAMA_LENGKAP] = user.name_lengkap
             preferences[GENDER] = user.gender
             preferences[LOKASI] = user.lokasi
             preferences[PP] = user.fotoPP
-            preferences[TELP] = user.no_telp.toString()
+            preferences[TELP] = user.no_telp
         }
     }
 
