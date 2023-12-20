@@ -34,7 +34,9 @@
         android:layout_marginTop="24dp"
         android:fontFamily="@font/dm_sans_bold"
         android:text="@string/question_text"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:paddingLeft="16dp"
+    android:paddingRight="16dp" />
 
     <!-- Options Layout -->
     <LinearLayout
@@ -52,10 +54,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="25sp"
-            android:textColor="@color/white"
+            android:textColor="@color/base_page"
             android:fontFamily="@font/dmsans_18pt_bold"
             android:text="@string/dislike"
-            android:background="@drawable/button_default" />
+            android:background="@drawable/button_default"
+            android:padding="12dp"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"/>
 
         <Button
             android:id="@+id/option2Button"
@@ -66,7 +71,10 @@
             android:textColor="@color/white"
             android:layout_marginTop="16dp"
             android:text="@string/enjoy"
-            android:background="@drawable/button_default" />
+            android:background="@drawable/button_default"
+            android:padding="12dp"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"/>
 
         <Button
             android:id="@+id/option3Button"
@@ -77,8 +85,10 @@
             android:textColor="@color/white"
             android:layout_marginTop="16dp"
             android:text="@string/netral"
-            android:background="@drawable/button_default" />
-
+            android:background="@drawable/button_default"
+            android:padding="12dp"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"/>
 
     </LinearLayout>
 
@@ -91,7 +101,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:padding="12dp" />
 
     <!-- Back Button -->
     <Button
@@ -102,5 +113,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:padding="12dp" />
 </RelativeLayout>

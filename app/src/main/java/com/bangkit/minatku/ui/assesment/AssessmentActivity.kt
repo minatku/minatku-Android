@@ -2,6 +2,7 @@ package com.bangkit.minatku.ui.assesment
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -38,6 +39,7 @@ class AssessmentActivity : AppCompatActivity() {
                     // Update UI with the first question
                     binding.pbAssessment.visibility = View.GONE
                     updateQuestion(result.data.firstOrNull())
+                    updateNextButton(result.data.size > 1)
                 }
                 is Hasil.Error -> {
                     // Handle error
@@ -76,20 +78,30 @@ class AssessmentActivity : AppCompatActivity() {
     }
 
     private fun onOptionSelected(option: Int) {
+        // Reset style for all buttons
+        resetButtonStyle(binding.option1Button)
+        resetButtonStyle(binding.option2Button)
+        resetButtonStyle(binding.option3Button)
+
+        // Set style for the selected button
+        when (option) {
+            0 -> setButtonStyle(binding.option1Button, R.color.blue, android.R.color.black)
+            1 -> setButtonStyle(binding.option2Button, R.color.blue, android.R.color.black)
+            2 -> setButtonStyle(binding.option3Button, R.color.blue, android.R.color.black)
+        }
+
         // Update ViewModel with the selected option
         viewModel.updateSelectedOption(option)
+    }
 
-        // Reset background color for all buttonsc 
-        binding.option1Button.setBackgroundResource(R.drawable.button_default)
-        binding.option2Button.setBackgroundResource(R.drawable.button_default)
-        binding.option3Button.setBackgroundResource(R.drawable.button_default)
+    private fun resetButtonStyle(button: Button) {
+        button.setBackgroundResource(R.drawable.button_default)
+        button.setTextColor(ContextCompat.getColor(this, android.R.color.white))
+    }
 
-        // Set background color for the selected button
-        when (option) {
-            0 -> binding.option1Button.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
-            1 -> binding.option2Button.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
-            2 -> binding.option3Button.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
-        }
+    private fun setButtonStyle(button: Button, backgroundColor: Int, textColor: Int) {
+        button.setBackgroundColor(ContextCompat.getColor(this, backgroundColor))
+        button.setTextColor(ContextCompat.getColor(this, textColor))
     }
 
     private fun onNextClicked() {
@@ -107,5 +119,19 @@ class AssessmentActivity : AppCompatActivity() {
             binding.questionText.text = it.isiPertanyaan
             // Update other UI elements if needed
         }
+    }
+
+    private fun updateNextButton(hasNextQuestion: Boolean) {
+        if (hasNextQuestion) {
+            binding.nextButton.text = getString(R.string.next)
+            binding.nextButton.setOnClickListener { onNextClicked() }
+        } else {
+            binding.nextButton.text = getString(R.string.finish)
+            binding.nextButton.setOnClickListener { onFinishClicked() }
+        }
+    }
+
+    private fun onFinishClicked() {
+        // Handle the "Finish" button click, e.g., navigating to the next screen or finishing the assessment
     }
 }
