@@ -1,14 +1,17 @@
 package com.bangkit.minatku.data.retrofit
 
+import com.bangkit.minatku.data.pref.UpdateUser
 import com.bangkit.minatku.data.response.AsessmentResponse
 import com.bangkit.minatku.data.response.LoginResponse
 import com.bangkit.minatku.data.response.MajorPredictResponse
 import com.bangkit.minatku.data.response.RegisterResponse
 import com.bangkit.minatku.data.response.Response
 import com.bangkit.minatku.data.response.UserData
+import com.bangkit.minatku.data.response.UserUpdate
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.PUT
 import retrofit2.http.Path
 
 interface ApiService {
@@ -28,5 +31,9 @@ interface ApiService {
         @Path("user_id") id: Int
     ): Response
 
-
+    @PUT("User/user/{user_id}")
+    suspend fun updateUser(
+        @Path("user_id") id: Int,
+        @Body request: UpdateUser
+    ): UserUpdate
 }

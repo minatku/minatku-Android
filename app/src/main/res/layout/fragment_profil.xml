@@ -12,15 +12,15 @@
         android:id="@+id/btn_logout"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:alpha="100"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:contentDescription="@string/logout"
+        android:alpha="100"
         android:background="@color/base_page"
+        android:contentDescription="@string/logout"
         android:src="@drawable/ic_logout" />
 
     <ScrollView
@@ -253,6 +253,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintVertical_bias="0.54"
                 app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                app:strokeWidth="3dp"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView

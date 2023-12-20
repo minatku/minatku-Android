@@ -26,23 +26,11 @@ class ProfilFragment : Fragment() {
     ): View? {
         // Initialize the binding
         _binding = FragmentProfilBinding.inflate(inflater, container, false)
+
         val view = binding.root
-
-        // Set a click listener for the Edit button using ViewBinding
-        binding.btnEdit.setOnClickListener {
-            // Start the EditProfilActivity when the Edit button is clicked
-            val intent = Intent(activity, EditProfilActivity::class.java)
-            startActivity(intent)
-        }
-
-        // Set a click listener for the Logout button using ViewBinding
-        binding.btnLogout.setOnClickListener {
-            logoutListener?.onLogout()
-        }
-
         val session = logoutListener?.getSession()
         val detail = logoutListener?.getDetail()
-        if (session != null && detail !=null) {
+        if (session != null && detail != null) {
             binding.apply {
                 tvUsername.text = session.name
                 tvNama.text = detail.name_lengkap
@@ -58,10 +46,20 @@ class ProfilFragment : Fragment() {
                     .into(ivUser)
 
             }
-            Log.d("id", detail.name_lengkap)
-
+        }
+        // Set a click listener for the Edit button using ViewBinding
+        binding.btnEdit.setOnClickListener {
+            val intent = Intent(activity, EditProfilActivity::class.java)
+            if (session != null) {
+                intent.putExtra(EditProfilActivity.EXTRA_ID,session.userId)
+            }
+            startActivity(intent)
         }
 
+        // Set a click listener for the Logout button using ViewBinding
+        binding.btnLogout.setOnClickListener {
+            logoutListener?.onLogout()
+        }
         return view
     }
 

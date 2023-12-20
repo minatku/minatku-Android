@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.bangkit.minatku.data.di.Injection
 import com.bangkit.minatku.data.repository.MinatkuRepository
 import com.bangkit.minatku.ui.assesment.AssessmentViewModel
+import com.bangkit.minatku.ui.editprofil.EditProfileViewmodel
 import com.bangkit.minatku.ui.login.LoginViewModel
 import com.bangkit.minatku.ui.navbar.NavbarViewModel
 import com.bangkit.minatku.ui.signup.SignUpViewModel
@@ -26,6 +27,9 @@ class ViewModelFactory(private val repository: MinatkuRepository) : ViewModelPro
             }
             modelClass.isAssignableFrom(AssessmentViewModel::class.java) -> {
                 AssessmentViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(EditProfileViewmodel::class.java) -> {
+                EditProfileViewmodel(repository) as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }
