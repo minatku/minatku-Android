@@ -48,7 +48,7 @@ class ProfilFragment : Fragment() {
                 tvNama.text = detail.name_lengkap
                 tvEmail.text = session.email
                 tvJeniskelamin.text = detail.gender
-                tvHandphone.text = detail.no_telp
+                tvHandphone.text = detail.no_telp.toString()
                 tvLokasi.text = detail.lokasi
                 tvTtl.text = detail.tgl_lahir
                 Picasso.get()
@@ -80,7 +80,7 @@ class ProfilFragment : Fragment() {
                 tvNama.text = detail.name_lengkap
                 tvEmail.text = session.email
                 tvJeniskelamin.text = detail.gender
-                tvHandphone.text = detail.no_telp
+                tvHandphone.text = detail.no_telp.toString()
                 tvLokasi.text = detail.lokasi
                 tvTtl.text = detail.tgl_lahir
                 Picasso.get()
@@ -89,15 +89,9 @@ class ProfilFragment : Fragment() {
                     .centerCrop()
                     .into(ivUser)
             }
-
-            Log.d("id", session.userId.toString())
-            Log.d("id", session.name)
-            Log.d("lokasi", detail.lokasi)
-            Log.d("Tes", detail.name_lengkap)
         }
     }
 
-    // Don't forget to clean up the binding instance
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

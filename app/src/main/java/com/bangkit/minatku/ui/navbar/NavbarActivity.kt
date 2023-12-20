@@ -10,7 +10,6 @@ import com.bangkit.minatku.R
 import com.bangkit.minatku.data.ViewModelFactory
 import com.bangkit.minatku.data.pref.UserDetail
 import com.bangkit.minatku.data.pref.UserModel
-import com.bangkit.minatku.data.response.UserData
 import com.bangkit.minatku.databinding.ActivityNavbarBinding
 import com.bangkit.minatku.ui.community.CommunityFragment
 import com.bangkit.minatku.ui.home.HomeFragment
@@ -82,7 +81,6 @@ class NavbarActivity : AppCompatActivity(), ProfilFragment.LogoutListener {
             }
         }
         viewModel.getDetail().observe(this) { user ->
-            // Simpan hasil observasi getDetail ke properti currentUserDetail
             currentUserDetail = user
             gender = user.gender
             foto = user.fotoPP

@@ -43,7 +43,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
             preferences[LOKASI]?: "",
             preferences[PP]?: "",
             preferences[NAMA_LENGKAP]?: "",
-            preferences[USER_ID]?:""
+            preferences[TELP]?:""
             )
         }
     }
