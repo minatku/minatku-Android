@@ -24,10 +24,7 @@ class EditProfilActivity : AppCompatActivity() {
         binding = ActivityEditProfilBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        // Set OnClickListener for the back button
         binding.btnBackprofil.setOnClickListener {
-            // Finish the activity when the back button is clicked
             finish()
         }
 
@@ -56,11 +53,9 @@ class EditProfilActivity : AppCompatActivity() {
                 viewModel.updateResult.observe(this) { result ->
                     when (result) {
                         is Hasil.Loading -> {
-                            showLoading(true)
                         }
 
                         is Hasil.Success -> {
-                            showLoading(false)
                             val response: UserUpdate = result.data
                             AlertDialog.Builder(this).apply {
                                 setTitle("Yeah!")
@@ -77,7 +72,6 @@ class EditProfilActivity : AppCompatActivity() {
                         }
 
                         is Hasil.Error -> {
-                            showLoading(false)
                             val errorMessage: String? = result.error
                             AlertDialog.Builder(this).apply {
                                 setTitle("OOPS")
@@ -99,16 +93,6 @@ class EditProfilActivity : AppCompatActivity() {
                     create()
                     show()
                 }
-            }
-        }
-    }
-
-    fun showLoading(isLoading: Boolean) {
-        binding.apply {
-            if (isLoading) {
-                progressBar.visibility = View.VISIBLE
-            } else {
-                progressBar.visibility = View.GONE
             }
         }
     }
