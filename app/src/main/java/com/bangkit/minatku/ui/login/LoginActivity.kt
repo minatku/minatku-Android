@@ -13,6 +13,7 @@ import com.bangkit.minatku.databinding.ActivityLoginBinding
 import com.bangkit.minatku.ui.assesment.AssessmentActivity
 import com.bangkit.minatku.ui.navbar.NavbarActivity
 import com.bangkit.minatku.ui.signup.SignUpActivity
+import com.bangkit.minatku.ui.starttest.StartTestActivity
 
 
 class LoginActivity : AppCompatActivity() {
@@ -55,7 +56,7 @@ class LoginActivity : AppCompatActivity() {
             setTitle("Mantap")
             setMessage(response.message)
             setPositiveButton("OK") { _, _ ->
-                val intent = Intent(this@LoginActivity, AssessmentActivity::class.java)
+                val intent = Intent(this@LoginActivity, StartTestActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(intent)
                 finish()

@@ -1,12 +1,24 @@
 package com.bangkit.minatku.ui.starttest
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import com.bangkit.minatku.R
+import androidx.appcompat.app.AppCompatActivity
+import com.bangkit.minatku.databinding.ActivityStartTestBinding  // Sesuaikan dengan nama file layout binding Anda
+import com.bangkit.minatku.ui.assesment.AssessmentActivity
 
 class StartTestActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityStartTestBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_start_test)
+        binding = ActivityStartTestBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+        binding.btnStarttest.setOnClickListener {
+            // Pindah ke AssessmentActivity
+            val intent = Intent(this, AssessmentActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

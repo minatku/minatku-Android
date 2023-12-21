@@ -194,4 +194,10 @@
         <item>Komputasi awan atau komputasi gemawan adalah gabungan pemanfaatan teknologi komputer dan pengembangan berbasis Internet. Awan adalah metafora dari internet, sebagaimana awan yang sering digambarkan di diagram jaringan komputer.</item>
         <item>Pada akhir tahun 2023 nanti, Bangkit akan melatih lebih dari 15.000 orang. Ini membuktikan bahwa program yang berada di bawah naungan Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi, dirancang khusus oleh Google, serta didukung penuh oleh GoTo dan Traveloka ini memiliki dampak yang masif terhadap calon talenta digital di Indonesia.</item>
     </string-array>
+    <string name="title_activity_end_test">EndTestActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+    <string name="masuk_ke_home">Masuk ke Home</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.bangkit.minatku.ui.assesment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -12,6 +13,7 @@ import com.bangkit.minatku.data.Hasil
 import com.bangkit.minatku.data.ViewModelFactory
 import com.bangkit.minatku.data.response.PertanyaanDataItem
 import com.bangkit.minatku.databinding.ActivityAssesmentBinding
+import com.bangkit.minatku.ui.endtest.EndTestActivity
 
 class AssessmentActivity : AppCompatActivity() {
 
@@ -88,6 +90,11 @@ class AssessmentActivity : AppCompatActivity() {
     }
 
     private fun onNextClicked() {
+        // Reset button styles for all options
+        resetButtonStyle(binding.option1Button)
+        resetButtonStyle(binding.option2Button)
+        resetButtonStyle(binding.option3Button)
+
         // Fetch the next question when the Next button is clicked
         viewModel.getNextQuestion()
 
@@ -146,16 +153,73 @@ class AssessmentActivity : AppCompatActivity() {
     }
 
     private fun updateNextButton(hasNextQuestion: Boolean) {
-        if (hasNextQuestion) {
-            binding.nextButton.text = getString(R.string.next)
-            binding.nextButton.setOnClickListener { onNextClicked() }
+        val currentQuestionIndex = viewModel.getCurrentQuestionIndex()
+
+        if (currentQuestionIndex >= 11) {
+            // If it's the 12th question or beyond, show the Finish button
+            binding.nextButton.visibility = View.GONE
+            binding.finishbutton.visibility = View.VISIBLE
+            binding.finishbutton.setOnClickListener { onFinishClicked() }
         } else {
-            binding.nextButton.text = getString(R.string.finish)
-            binding.nextButton.setOnClickListener { onFinishClicked() }
+            // Otherwise, show the Next button and hide the Finish button
+            binding.nextButton.visibility = View.VISIBLE
+            binding.finishbutton.visibility = View.GONE
+            binding.nextButton.setOnClickListener { onNextClicked() }
         }
+
+        // Hide the Back button if it's the first question
+        binding.backButton.visibility = if (currentQuestionIndex == 0) View.GONE else View.VISIBLE
     }
 
     private fun onFinishClicked() {
-        // Handle the "Finish" button click, e.g., navigating to the next screen or finishing the assessment
+        // Show loading indicator
+        showLoading()
+
+        // Get the selected options
+        val selectedOptions = viewModel.getSelectedOptions()
+
+        // Submit the assessment
+        viewModel.submitAssessment(selectedOptions)
+
+        // Observe the assessment result
+        viewModel.assessmentResult.observe(this, Observer { result ->
+            when (result) {
+                is Hasil.Success -> {
+                    // Hide loading indicator
+                    hideLoading()
+
+                    // Handle success, e.g., navigate to the next screen
+                    navigateToEndTestActivity()
+                }
+                is Hasil.Error -> {
+                    // Hide loading indicator
+                    hideLoading()
+                    navigateToEndTestActivity()
+                    // Handle error, e.g., show a toast or display an error message
+                    // For example: Toast.makeText(this, result.message, Toast.LENGTH_SHORT).show()
+                }
+                is Hasil.Loading -> {
+                    // Do nothing or update UI for ongoing loading
+                }
+            }
+        })
+    }
+
+    private fun showLoading() {
+        // Show loading indicator (e.g., a ProgressBar)
+        binding.progressBar.visibility = View.VISIBLE
+    }
+
+    private fun hideLoading() {
+        // Hide loading indicator (e.g., a ProgressBar)
+        binding.progressBar.visibility = View.GONE
+    }
+
+
+    private fun navigateToEndTestActivity() {
+        // Intent to EndTestActivity
+        val intent = Intent(this, EndTestActivity::class.java)
+        startActivity(intent)
+        finish() // Optional: finish the current activity if needed
     }
 }

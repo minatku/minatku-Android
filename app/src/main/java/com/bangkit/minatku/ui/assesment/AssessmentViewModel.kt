@@ -34,6 +34,10 @@ class AssessmentViewModel(private val repository: MinatkuRepository) : ViewModel
         }
     }
 
+    fun getSelectedOptions(): List<Int> {
+        return selectedOptions
+    }
+
     fun getQuestions() {
         viewModelScope.launch {
             _questions.value = Hasil.Loading
@@ -96,5 +100,8 @@ class AssessmentViewModel(private val repository: MinatkuRepository) : ViewModel
         return currentQuestionId
     }
 
+    fun getCurrentQuestionIndex(): Int {
+        return currentQuestionIndex
+    }
 
 }
