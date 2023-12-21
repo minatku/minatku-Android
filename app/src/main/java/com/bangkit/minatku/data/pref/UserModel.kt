@@ -20,3 +20,11 @@ data class UserDetail(
     val name_lengkap: String,
     val no_telp: String,
 )
+
+data class Top(
+    val top1: String,
+    val top2: String,
+    val top3: String,
+    val top4: String,
+    val top5: String
+)

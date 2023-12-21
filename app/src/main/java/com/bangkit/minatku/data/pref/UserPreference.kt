@@ -27,7 +27,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         }
     }
 
-    suspend fun saveDetail(user: UserDetail){
+    suspend fun saveDetail(user: UserDetail) {
         dataStore.edit { preferences ->
             preferences[NAME_KEY] = user.name
             preferences[TGL_LAHIR] = user.tgl_lahir
@@ -39,16 +39,38 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         }
     }
 
-    fun getDetail(): Flow<UserDetail>{
-        return dataStore.data.map { preferences->
+    suspend fun saveTop(user: Top) {
+        dataStore.edit { preferences ->
+            preferences[TOP1] = user.top1
+            preferences[TOP2] = user.top2
+            preferences[TOP3] = user.top3
+            preferences[TOP4] = user.top3
+            preferences[TOP5] = user.top5
+        }
+    }
+
+    fun getDetail(): Flow<UserDetail> {
+        return dataStore.data.map { preferences ->
             UserDetail(
-                preferences[NAME_KEY]?: "",
-            preferences[TGL_LAHIR]?: "",
-            preferences[GENDER]?: "",
-            preferences[LOKASI]?: "",
-            preferences[PP]?: "",
-            preferences[NAMA_LENGKAP]?: "",
-            preferences[TELP]?:""
+                preferences[NAME_KEY] ?: "",
+                preferences[TGL_LAHIR] ?: "",
+                preferences[GENDER] ?: "",
+                preferences[LOKASI] ?: "",
+                preferences[PP] ?: "",
+                preferences[NAMA_LENGKAP] ?: "",
+                preferences[TELP] ?: ""
+            )
+        }
+    }
+
+    fun getTop(): Flow<Top> {
+        return dataStore.data.map { preferences ->
+            Top(
+                preferences[TOP1] ?: "",
+                preferences[TOP2] ?: "",
+                preferences[TOP3] ?: "",
+                preferences[TOP4] ?: "",
+                preferences[TOP5] ?: ""
             )
         }
     }
@@ -83,6 +105,11 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         private val LOKASI = stringPreferencesKey("lokasi")
         private val PP = stringPreferencesKey("FotoPP")
         private val TELP = stringPreferencesKey("Telp")
+        private val TOP1 = stringPreferencesKey("top1")
+        private val TOP2 = stringPreferencesKey("top2")
+        private val TOP3 = stringPreferencesKey("top3")
+        private val TOP4 = stringPreferencesKey("top4")
+        private val TOP5 = stringPreferencesKey("top5")
 
         fun getInstance(dataStore: DataStore<Preferences>): UserPreference {
             return UserPreference(dataStore)

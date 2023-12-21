@@ -1,6 +1,7 @@
 package com.bangkit.minatku.data.repository
 
 import com.bangkit.minatku.data.Hasil
+import com.bangkit.minatku.data.pref.Top
 import com.bangkit.minatku.data.pref.UpdateUser
 import com.bangkit.minatku.data.pref.UserDetail
 import com.bangkit.minatku.data.pref.UserModel
@@ -8,6 +9,7 @@ import com.bangkit.minatku.data.pref.UserPreference
 import com.bangkit.minatku.data.response.AsessmentResponse
 import com.bangkit.minatku.data.response.ErrorResponse
 import com.bangkit.minatku.data.response.LoginResponse
+import com.bangkit.minatku.data.response.MajorPredictItem
 import com.bangkit.minatku.data.response.RegisterResponse
 import com.bangkit.minatku.data.response.Response
 import com.bangkit.minatku.data.response.UpdatePP
@@ -36,12 +38,20 @@ class MinatkuRepository private constructor(
         userPreference.saveDetail(user)
     }
 
+    suspend fun saveMajor(top: Top) {
+        userPreference.saveTop(top)
+    }
+
     fun getSession(): Flow<UserModel> {
         return userPreference.getSession()
     }
 
     fun getDetail(): Flow<UserDetail> {
         return userPreference.getDetail()
+    }
+
+    fun getTop(): Flow<Top> {
+        return userPreference.getTop()
     }
 
     suspend fun logout() {
@@ -80,7 +90,7 @@ class MinatkuRepository private constructor(
     ): Hasil<UpdatePP> {
         Hasil.Loading
         return try {
-            val response = apiService.postpp(id,multipartBody)
+            val response = apiService.postpp(id, multipartBody)
 
             if (response.error == true) {
                 Hasil.Error(response.message ?: "Unknown error")
@@ -167,6 +177,8 @@ class MinatkuRepository private constructor(
                 Hasil.Error(response.message ?: "Unknown error")
             } else {
                 val userData = response.userData
+                val usermajor = userData.majorPredict
+
 
                 val session = UserDetail(
                     name = userData?.username.orEmpty(),
@@ -177,7 +189,15 @@ class MinatkuRepository private constructor(
                     name_lengkap = userData?.namaLengkap.orEmpty(),
                     no_telp = userData?.noTelepon.orEmpty()
                 )
+                val top = Top(
+                    top1 = usermajor?.get(0)?.top1.orEmpty(),
+                    top2 = usermajor?.get(0)?.top2.orEmpty(),
+                    top3 = usermajor?.get(0)?.top3.orEmpty(),
+                    top4 = usermajor?.get(0)?.top4.orEmpty(),
+                    top5 = usermajor?.get(0)?.top5.orEmpty()
+                )
                 saveDetail(session)
+                saveMajor(top)
                 Hasil.Success(response)
             }
 
