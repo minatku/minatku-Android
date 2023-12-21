@@ -28,7 +28,7 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
-        val name = arguments?.getString("name")
+        val name = arguments?.getString("names")
         val foto = arguments?.getString("foto")
 
         binding.apply {
@@ -52,7 +52,7 @@ class HomeFragment : Fragment() {
         fun newInstance(name: String, foto: String): HomeFragment {
             val fragment = HomeFragment()
             val args = Bundle()
-            args.putString("name", name)
+            args.putString("names", name)
             args.putString("foto", foto)
 
             fragment.arguments = args

@@ -47,7 +47,7 @@ class NavbarActivity : AppCompatActivity(), ProfilFragment.LogoutListener {
             when (item.itemId) {
                 R.id.NavHome -> {
                     updateData()
-                    replaceFragment(HomeFragment.newInstance(name, foto))
+                    replaceFragment(HomeFragment.newInstance(name_lengkap, foto))
                 }
 
                 R.id.NavCommunity -> {
@@ -76,7 +76,6 @@ class NavbarActivity : AppCompatActivity(), ProfilFragment.LogoutListener {
         viewModel.getSession().observe(this) { user ->
             currentUser = user
             id = user.userId
-            name = user.name
             email = user.email
             viewModel.detail(id)
             if (!user.isLogin) {
@@ -87,14 +86,14 @@ class NavbarActivity : AppCompatActivity(), ProfilFragment.LogoutListener {
         viewModel.getDetail().observe(this) { tes ->
             currentUserDetail = tes
             gender = tes.gender
+            name = tes.name
+            Log.d("tes",tes.name)
             foto = tes.fotoPP
             name_lengkap = tes.name_lengkap
             no = tes.no_telp
             tgl = tes.tgl_lahir
             lok = tes.lokasi
-            val photoPath = tes.fotoPP
-            val name = tes.name_lengkap
-            val homeFragment = HomeFragment.newInstance(name, photoPath)
+            val homeFragment = HomeFragment.newInstance(name_lengkap, foto)
             replaceFragment(homeFragment)
         }
     }
@@ -105,12 +104,12 @@ class NavbarActivity : AppCompatActivity(), ProfilFragment.LogoutListener {
         }
         viewModel.getSession().observe(this) { user ->
             id = user.userId
-            name = user.name
             email = user.email
         }
         viewModel.getDetail().observe(this) { user ->
             gender = user.gender
             foto = user.fotoPP
+            name = user.name
             name_lengkap = user.name_lengkap
             no = user.no_telp
             tgl = user.tgl_lahir

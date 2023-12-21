@@ -169,6 +169,7 @@ class MinatkuRepository private constructor(
                 val userData = response.userData
 
                 val session = UserDetail(
+                    name = userData?.username.orEmpty(),
                     tgl_lahir = userData?.tanggalLahir.orEmpty(),
                     gender = userData?.gender.orEmpty(),
                     lokasi = userData?.lokasi.orEmpty(),

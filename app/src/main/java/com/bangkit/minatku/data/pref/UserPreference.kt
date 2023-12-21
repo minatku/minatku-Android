@@ -29,6 +29,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
 
     suspend fun saveDetail(user: UserDetail){
         dataStore.edit { preferences ->
+            preferences[NAME_KEY] = user.name
             preferences[TGL_LAHIR] = user.tgl_lahir
             preferences[NAMA_LENGKAP] = user.name_lengkap
             preferences[GENDER] = user.gender
@@ -41,6 +42,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
     fun getDetail(): Flow<UserDetail>{
         return dataStore.data.map { preferences->
             UserDetail(
+                preferences[NAME_KEY]?: "",
             preferences[TGL_LAHIR]?: "",
             preferences[GENDER]?: "",
             preferences[LOKASI]?: "",

@@ -12,6 +12,7 @@ data class UserModel(
 )
 
 data class UserDetail(
+    val name: String,
     val tgl_lahir: String,
     val gender: String,
     val lokasi: String,
