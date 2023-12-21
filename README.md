@@ -20,7 +20,7 @@ We built the app in Android Studio with the following libraries
 
 # UI App
 <img src="https://raw.githubusercontent.com/minatku/.github/main/profile/img/1.png"></img>
-<img src="https://raw.githubusercontent.com/minatku/.github/main/profile/img/2.png
+<img src="https://raw.githubusercontent.com/minatku/.github/main/profile/img/2.png"></img>
 
 # Contact
 For further information, kindly contact to :
