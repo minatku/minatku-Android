@@ -10,6 +10,7 @@ import com.bangkit.minatku.data.response.ErrorResponse
 import com.bangkit.minatku.data.response.LoginResponse
 import com.bangkit.minatku.data.response.RegisterResponse
 import com.bangkit.minatku.data.response.Response
+import com.bangkit.minatku.data.response.UpdatePP
 import com.bangkit.minatku.data.response.UserUpdate
 import com.bangkit.minatku.data.retrofit.ApiConfig
 import com.bangkit.minatku.data.retrofit.ApiService
@@ -18,8 +19,7 @@ import com.bangkit.minatku.data.retrofit.LoginRequest
 import com.bangkit.minatku.data.retrofit.RegisterRequest
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.Flow
-import org.json.JSONArray
-import org.json.JSONObject
+import okhttp3.MultipartBody
 import retrofit2.HttpException
 
 class MinatkuRepository private constructor(
@@ -59,6 +59,28 @@ class MinatkuRepository private constructor(
             // Lakukan pemanggilan API untuk registrasi
             val request = RegisterRequest(email, username, nama_lengkap, password)
             val response = apiService.register(request)
+
+            if (response.error == true) {
+                Hasil.Error(response.message ?: "Unknown error")
+            } else {
+                Hasil.Success(response)
+            }
+        } catch (e: HttpException) {
+            // Handle exception
+            val jsonInString = e.response()?.errorBody()?.string()
+            val errorBody = Gson().fromJson(jsonInString, ErrorResponse::class.java)
+            val errorMessage = errorBody.message
+            Hasil.Error(errorMessage.toString())
+        }
+    }
+
+    suspend fun updatepp(
+        id: Int,
+        multipartBody: MultipartBody.Part
+    ): Hasil<UpdatePP> {
+        Hasil.Loading
+        return try {
+            val response = apiService.postpp(id,multipartBody)
 
             if (response.error == true) {
                 Hasil.Error(response.message ?: "Unknown error")

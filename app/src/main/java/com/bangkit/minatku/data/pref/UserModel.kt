@@ -1,5 +1,8 @@
 package com.bangkit.minatku.data.pref
 
+import com.bangkit.minatku.data.response.MajorPredictItem
+import kotlin.collections.List
+
 data class UserModel(
     val name: String,
     val email: String,
@@ -14,5 +17,5 @@ data class UserDetail(
     val lokasi: String,
     val fotoPP: String,
     val name_lengkap: String,
-    val no_telp: String
+    val no_telp: String,
 )

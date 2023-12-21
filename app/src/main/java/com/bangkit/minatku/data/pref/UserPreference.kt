@@ -7,6 +7,9 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
+import com.bangkit.minatku.data.response.MajorPredictItem
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
@@ -77,7 +80,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         private val GENDER = stringPreferencesKey("gender")
         private val LOKASI = stringPreferencesKey("lokasi")
         private val PP = stringPreferencesKey("FotoPP")
-        private val TELP = stringPreferencesKey("Telp")// Change to stringPreferencesKey
+        private val TELP = stringPreferencesKey("Telp")
 
         fun getInstance(dataStore: DataStore<Preferences>): UserPreference {
             return UserPreference(dataStore)

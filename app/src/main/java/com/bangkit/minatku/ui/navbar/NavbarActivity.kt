@@ -2,6 +2,7 @@ package com.bangkit.minatku.ui.navbar
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -91,23 +92,10 @@ class NavbarActivity : AppCompatActivity(), ProfilFragment.LogoutListener {
             no = tes.no_telp
             tgl = tes.tgl_lahir
             lok = tes.lokasi
-        }
-
-        if (intent.hasExtra("replaceFragment")) {
-            val fragmentToReplace = intent.getStringExtra("replaceFragment")
-            when (fragmentToReplace) {
-                "ProfileFragment" -> replaceFragment(ProfilFragment().apply {
-                    setLogoutListener(this@NavbarActivity)
-                })
-            }
-        } else {
-            viewModel.getDetail().observe(this) { userDetail ->
-                val photoPath = userDetail.fotoPP
-                val name = userDetail.name_lengkap
-
-                val homeFragment = HomeFragment.newInstance(name, photoPath)
-                replaceFragment(homeFragment)
-            }
+            val photoPath = tes.fotoPP
+            val name = tes.name_lengkap
+            val homeFragment = HomeFragment.newInstance(name, photoPath)
+            replaceFragment(homeFragment)
         }
     }
 

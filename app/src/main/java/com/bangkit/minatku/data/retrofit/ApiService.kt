@@ -6,12 +6,15 @@ import com.bangkit.minatku.data.response.LoginResponse
 import com.bangkit.minatku.data.response.MajorPredictResponse
 import com.bangkit.minatku.data.response.RegisterResponse
 import com.bangkit.minatku.data.response.Response
-import com.bangkit.minatku.data.response.UserData
+import com.bangkit.minatku.data.response.UpdatePP
 import com.bangkit.minatku.data.response.UserUpdate
+import okhttp3.MultipartBody
 import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.Multipart
 import retrofit2.http.POST
 import retrofit2.http.PUT
+import retrofit2.http.Part
 import retrofit2.http.Path
 
 interface ApiService {
@@ -36,4 +39,11 @@ interface ApiService {
         @Path("user_id") id: Int,
         @Body request: UpdateUser
     ): UserUpdate
+
+    @Multipart
+    @POST("User/user/{user_id}/profile-picture")
+    suspend fun postpp(
+        @Path("user_id") id: Int,
+        @Part file: MultipartBody.Part,
+    ):UpdatePP
 }
