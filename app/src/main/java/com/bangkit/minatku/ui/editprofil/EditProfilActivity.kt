@@ -36,6 +36,7 @@ class EditProfilActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityEditProfilBinding
     private var currentImageUri: Uri? = null
+    private lateinit var check: String
 
     private val requestPermissionLauncher =
         registerForActivityResult(
@@ -71,6 +72,20 @@ class EditProfilActivity : AppCompatActivity() {
 
         binding.btnEditphoto.setOnClickListener {
             showImageSourceDialog()
+        }
+
+        binding.checkLak.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                check = "1"
+                binding.checkPer.isChecked = false
+            }
+        }
+
+        binding.checkPer.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                check = "2"
+                binding.checkLak.isChecked = false
+            }
         }
 
         setupAction()
@@ -128,13 +143,6 @@ class EditProfilActivity : AppCompatActivity() {
     private fun setupAction() {
         binding.btnSave.setOnClickListener {
             val id = intent.getIntExtra(EXTRA_ID, 0)
-            var check = ""
-            if (binding.checkLak.isChecked) {
-                check = "1"
-            }
-            if (binding.checkPer.isChecked) {
-                check = "2"
-            }
             val username = binding.edUsername.text.toString()
             val nama_lengkap = binding.edNama.text.toString()
             val tgl_lahir = binding.edTtl.text.toString()
@@ -174,6 +182,8 @@ class EditProfilActivity : AppCompatActivity() {
                                 show()
                             }
                         }
+
+                        else -> {}
                     }
                 }
                 if (currentImageUri != null) {

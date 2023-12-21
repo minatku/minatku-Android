@@ -90,7 +90,6 @@ class ProfilFragment : Fragment() {
             // Check for nullability using the safe call operator and provide default values if null
             binding.apply {
                 tvUsername.text = detail?.name ?: ""
-                Log.d("tes",detail?.name.toString())
                 tvNama.text = detail?.name_lengkap ?: ""
                 tvEmail.text = session?.email ?: ""
                 tvJeniskelamin.text = detail?.gender ?: ""

@@ -100,7 +100,7 @@ class MinatkuRepository private constructor(
         id: Int,
         username: String,
         nama_lengkap: String,
-        tgl_lahir: String,
+        tanggal_lahir: String,
         gender: String,
         no_telp: String,
         lokasi: String
@@ -110,7 +110,7 @@ class MinatkuRepository private constructor(
             val session = UpdateUser(
                 username,
                 nama_lengkap,
-                tgl_lahir,
+                tanggal_lahir,
                 gender,
                 no_telp,
                 lokasi

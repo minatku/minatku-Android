@@ -120,7 +120,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="@font/dm_sans"
-            android:inputType="text" />
+            android:inputType="date" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
