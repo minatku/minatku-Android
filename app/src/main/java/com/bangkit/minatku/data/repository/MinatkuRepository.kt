@@ -13,10 +13,13 @@ import com.bangkit.minatku.data.response.Response
 import com.bangkit.minatku.data.response.UserUpdate
 import com.bangkit.minatku.data.retrofit.ApiConfig
 import com.bangkit.minatku.data.retrofit.ApiService
+import com.bangkit.minatku.data.retrofit.AssessmentRequest
 import com.bangkit.minatku.data.retrofit.LoginRequest
 import com.bangkit.minatku.data.retrofit.RegisterRequest
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.Flow
+import org.json.JSONArray
+import org.json.JSONObject
 import retrofit2.HttpException
 
 class MinatkuRepository private constructor(
@@ -163,12 +166,21 @@ class MinatkuRepository private constructor(
         }
     }
 
-    suspend fun submitAssessment(answers: List<Int>): Boolean {
+    suspend fun submitAssessment(answers: List<Int>): Hasil<Boolean> {
         return try {
-            val response = apiService.submitAssessment(answers)
-            response.error == true // Use safe call operator
+            // Create an instance of the data class representing the JSON structure
+            val assessmentRequest = AssessmentRequest(input = answers)
+
+            // Make the API call with the data class object
+            val response = apiService.submitAssessment(assessmentRequest)
+
+            if (response.error == true) {
+                Hasil.Error(response.message ?: "Unknown error")
+            } else {
+                Hasil.Success(true)
+            }
         } catch (e: Exception) {
-            throw e
+            Hasil.Error(e.message ?: "Unknown error")
         }
     }
 

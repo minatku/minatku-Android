@@ -21,17 +21,28 @@ class AssessmentViewModel(private val repository: MinatkuRepository) : ViewModel
         // Fetch questions when the ViewModel is created
         getQuestions()
     }
-
+    private val _navigateToFinish = MutableLiveData<Boolean>()
+    val navigateToFinish: LiveData<Boolean> get() = _navigateToFinish
     fun submitAssessment(answers: List<Int>) {
         viewModelScope.launch {
             _assessmentResult.value = Hasil.Loading
             try {
                 val result = repository.submitAssessment(answers)
-                _assessmentResult.value = Hasil.Success(result)
+                _assessmentResult.value = result
+                if (result is Hasil.Success && result.data) {
+                    // Set the navigation event to true
+                    _navigateToFinish.value = true
+                } else if (result is Hasil.Error) {
+                    // Handle error, e.g., show a toast or display an error message
+                }
             } catch (e: Exception) {
                 _assessmentResult.value = Hasil.Error(e.message ?: "Unknown error")
             }
         }
+    }
+
+    fun onNavigateToFinishComplete() {
+        _navigateToFinish.value = false
     }
 
     fun getSelectedOptions(): List<Int> {

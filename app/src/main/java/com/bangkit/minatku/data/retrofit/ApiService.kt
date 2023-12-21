@@ -24,7 +24,7 @@ interface ApiService {
     @GET("Pertanyaan/pertanyaan")
     suspend fun getQuestions(): AsessmentResponse
     @POST("Major_Predict/predict")
-    suspend fun submitAssessment(@Body answers: List<Int>): MajorPredictResponse
+    suspend fun submitAssessment(@Body request: AssessmentRequest): MajorPredictResponse
 
     @GET("User/user/{user_id}")
     suspend fun user(

@@ -66,6 +66,15 @@ class AssessmentActivity : AppCompatActivity() {
             }
         })
 
+        viewModel.navigateToFinish.observe(this, Observer { navigate ->
+            if (navigate) {
+                // Navigate to EndTestActivity
+                navigateToEndTestActivity()
+                // Reset the navigation event
+                viewModel.onNavigateToFinishComplete()
+            }
+        })
+
         // Fetch questions when the activity is created
         viewModel.getQuestions()
 

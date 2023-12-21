@@ -11,3 +11,5 @@ data class LoginRequest(
     val email: String,
     val password: String
 )
+
+data class AssessmentRequest(val input: List<Int>)
