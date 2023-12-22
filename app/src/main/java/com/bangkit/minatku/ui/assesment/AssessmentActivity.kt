@@ -150,8 +150,30 @@ class AssessmentActivity : AppCompatActivity() {
 
 
     private fun onBackClicked() {
-        // Handle the Back button click if needed
+        // Check if there are questions to go back to
+        if (viewModel.getCurrentQuestionIndex() > 0) {
+
+            viewModel.resetOriginalSelectedOptionsSize()
+            // Remove the last selected option
+            viewModel.removeLastSelectedOption()
+
+            // Decrement the current question index
+            viewModel.decrementCurrentQuestionIndex()
+
+            // Fetch and display the previous question
+            viewModel.getPreviousQuestion()
+
+            // Update UI with the current question ID
+            val currentQuestionId = viewModel.getCurrentQuestionId()
+            // Handle the logic to update UI based on currentQuestionId
+            // For example, you can update a TextView to display the current question ID.
+        } else {
+            // If there are no more previous questions, handle it accordingly
+            // For example, show a message or disable the back button
+        }
     }
+
+
 
     private fun updateQuestion(question: PertanyaanDataItem?) {
         // Update UI with the new question

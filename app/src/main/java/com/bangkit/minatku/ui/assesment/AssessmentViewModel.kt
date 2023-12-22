@@ -17,6 +17,8 @@ class AssessmentViewModel(private val repository: MinatkuRepository) : ViewModel
     private val _questions = MutableLiveData<Hasil<List<PertanyaanDataItem>>>()
     val questions: LiveData<Hasil<List<PertanyaanDataItem>>> get() = _questions
 
+    private var originalSelectedOptionsSize = 0
+
     init {
         // Fetch questions when the ViewModel is created
         getQuestions()
@@ -30,6 +32,8 @@ class AssessmentViewModel(private val repository: MinatkuRepository) : ViewModel
                 val result = repository.submitAssessment(answers)
                 _assessmentResult.value = result
                 if (result is Hasil.Success && result.data) {
+                    // Reset the originalSelectedOptionsSize when assessment is submitted
+                    originalSelectedOptionsSize = selectedOptions.size
                     // Set the navigation event to true
                     _navigateToFinish.value = true
                 } else if (result is Hasil.Error) {
@@ -107,12 +111,48 @@ class AssessmentViewModel(private val repository: MinatkuRepository) : ViewModel
         }
     }
 
+    fun decrementCurrentQuestionIndex() {
+        if (currentQuestionIndex > 0) {
+            currentQuestionIndex--
+        }
+    }
+
+    fun removeLastSelectedOption() {
+        if (selectedOptions.isNotEmpty() && selectedOptions.size > originalSelectedOptionsSize) {
+            selectedOptions.removeAt(selectedOptions.size - 1)
+        }
+    }
+
+    fun getPreviousQuestion() {
+        val hasil = _questions.value
+
+        if (hasil is Hasil.Success) {
+            val dataSize = hasil.data.size
+
+            if (currentQuestionIndex >= 0 && currentQuestionIndex < dataSize) {
+                val previousQuestion = hasil.data[currentQuestionIndex]
+                _currentQuestion.value = Hasil.Success(previousQuestion)
+                updateCurrentQuestionId(previousQuestion.idPertanyaan ?: 0)
+            }
+        } else if (hasil is Hasil.Loading) {
+            // Handle loading state if needed
+        } else if (hasil is Hasil.Error) {
+            // Handle error state if needed
+        } else {
+            // Handle the case where _questions.value is null
+        }
+    }
+
     fun getCurrentQuestionId(): Int {
         return currentQuestionId
     }
 
     fun getCurrentQuestionIndex(): Int {
         return currentQuestionIndex
+    }
+
+    fun resetOriginalSelectedOptionsSize() {
+        originalSelectedOptionsSize = selectedOptions.size
     }
 
 }
