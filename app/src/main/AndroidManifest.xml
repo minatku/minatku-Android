@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,13 +22,73 @@
         android:theme="@style/Theme.MinatKu"
         tools:targetApi="31">
         <activity
-            android:name=".ui.login.LoginActivity"
+            android:name=".ui.endtest.EndTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.joinpremium.JoinPremiumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.community.MTActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.assesment.AssessmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.starttest.StartTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.editpassword.EditPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.editprofil.EditProfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profil.ProfilFragment"
+            android:exported="false" />
+        <activity
+            android:name=".ui.community.CommunityFragment"
             android:exported="false" />
         <activity
             android:name=".ui.splash.SplashScreenActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.modul.premium.detail_modul.Detail_Modul"
+            android:exported="false" />
+        <activity
+            android:name=".ui.modul.premium.ModulPremFragment"
+            android:exported="false" />
+        <activity
+            android:name=".ui.modul.non_premium.ModulNonPrem"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.HomeFragment"
+            android:exported="false" />
+        <activity
+            android:name=".ui.checkEmail.CheckMail"
+            android:exported="false" />
+        <activity
+            android:name=".ui.forgotPW.ForgotPwActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.success.SuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.signup.SignUpActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.welcome.WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.navbar.NavbarActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +96,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

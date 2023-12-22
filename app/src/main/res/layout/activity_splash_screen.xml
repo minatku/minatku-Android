@@ -8,19 +8,23 @@
     tools:context=".ui.splash.SplashScreenActivity" >
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iv_logominatku"
         android:layout_width="367dp"
         android:layout_height="556dp"
         android:src="@drawable/logo_minatku"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="87dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/tv_minatkutext"
         android:layout_width="270dp"
         android:layout_height="37dp"
         android:src="@drawable/minatku_text"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="663dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logominatku" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

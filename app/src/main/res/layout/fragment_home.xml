@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_page"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/pp_img"
+            android:layout_width="65dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="26dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.908"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/Hai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/dmsans_18pt_bold"
+            android:text="@string/hai"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toStartOf="@id/pp_img"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:fontFamily="@font/dmsans_18pt_bold"
+            android:text="@string/username"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toStartOf="@id/pp_img"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Hai" />
+
+        <View
+            android:id="@+id/kotakView"
+            android:layout_width="359dp"
+            android:layout_height="143dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="143dp"
+            android:background="@drawable/rounded"
+            android:backgroundTint="@color/blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detail_join"
+            android:layout_width="162dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/dmsans_18pt_bold"
+            android:text="@string/detail_join"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@id/kotakView"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/kotakView"
+            app:layout_constraintTop_toTopOf="@+id/kotakView" />
+
+        <ImageView
+            android:layout_width="138dp"
+            android:layout_height="199dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/hero"
+            app:layout_constraintEnd_toEndOf="@id/kotakView"
+            app:layout_constraintHorizontal_bias="0.96"
+            app:layout_constraintStart_toStartOf="@id/kotakView"
+            app:layout_constraintTop_toBottomOf="@+id/pp_img" />
+
+        <Button
+            android:id="@+id/join_button"
+            android:layout_width="120dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="92dp"
+            android:background="@drawable/rounded"
+            android:padding="0dp"
+            android:textColor="@color/white"
+            android:text="@string/button_join"
+            android:textSize="15sp"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toEndOf="@+id/kotakView"
+            app:layout_constraintHorizontal_bias="0.066"
+            app:layout_constraintStart_toStartOf="@+id/kotakView"
+            app:layout_constraintTop_toTopOf="@+id/kotakView" />
+
+        <TextView
+            android:id="@+id/head_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/dmsans_18pt_bold"
+            android:text="@string/minat_dan_bakatmu"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.015"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kotakView" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bakat"
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded"
+            android:backgroundTint="@color/blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.519"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/head_model">
+            <TextView
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:fontFamily="@font/dmsans_18pt_bold"
+                android:textSize="20sp"
+                android:text="@string/hasil_asesmen"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/judul1"
+                android:layout_marginTop="60dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/dmsans_18pt_regular"
+                android:text="judul 1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/judul2"
+                android:layout_marginTop="90dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/dmsans_18pt_regular"
+                android:text="judul 1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/judul3"
+                android:layout_marginTop="120dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/dmsans_18pt_regular"
+                android:text="judul 1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/judul4"
+                android:layout_marginTop="150dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/dmsans_18pt_regular"
+                android:text="judul 1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/judul5"
+                android:layout_marginTop="180dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/dmsans_18pt_regular"
+                android:text="judul 1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"/>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

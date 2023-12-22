@@ -1,3 +1,203 @@
 <resources>
     <string name="app_name">MinatKu</string>
+    <string name="success_desc">Selamat Akun kamu sudah berhasil terdaftar. klik tombol kembali masuk untuk ke masuk ke halaman beranda.</string>
+    <string name="success_main">Sukses Terdaftar</string>
+    <string name="image_success">Image_Success</string>
+    <string name="Masuk">Masuk</string>
+    <string name="forg_main">Lupa Password?</string>
+    <string name="forg_desc">Untuk mengatur ulang kata sandi, Anda memerlukan email atau nomor ponsel yang dapat diautentikasi.</string>
+    <string name="check_main">Periksa Email Anda</string>
+    <string name="check_desc">Kami telah mengirimkan pembaruan kata sandi ke alamat email Novallinohamid@gmail.com</string>
+    <string name="email_check">Anda belum menerima email?  Kirim ulang</string>
+    <string name="invalidEmail">Email Invalid</string>
+    <string name="invalidPassword">"Password cannot be less than 8 characters"</string>
+    <string name="nama">Nama</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="post">Post</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="nomor_handpone">Nomor Handpone</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="lokasi">Lokasi</string>
+    <string name="email">Email</string>
+    <string name="edit_profil">Edit Profil</string>
+    <string name="detail_minat_dan_bakat">Detail Minat dan Bakat</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="no_telepon">No.Telepon</string>
+    <string name="l_n">L/N</string>
+    <string name="edit_foto_profil">Edit Foto Profil</string>
+    <string name="masukkan_email">Masukkan Email</string>
+    <string name="nomor_handphone">Nomor Handphone</string>
+    <string name="simpan_perubahan">Simpan Perubahan</string>
+    <string name="edit_foto">Edit Foto</string>
+    <string name="minatku_siap_membantu_kamu_mengatasi_masalah_minat_dan_bakatmu">MinatKu siap membantu kamu mengatasi masalah minat dan bakatmu :)</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="lupa_password">Lupa Password?</string>
+    <string name="masuk">MASUK</string>
+    <string name="anda_belum_memiliki_akun">Anda Belum Memiliki Akun?</string>
+    <string name="daftar"><u>Daftar</u></string>
+    <string name="password">Password</string>
+    <string name="minatku_text">Minatku Text</string>
+    <string name="daftar_dulu_yuk">Daftar Dulu Yuk :)</string>
+    <string name="edit_password">Edit Password</string>
+    <string name="logout">Logout</string>
+    <string name="simpan_sandi">Simpan Sandi</string>
+    <string name="konfirmasi_kata_sandi">Konfirmasi Kata Sandi</string>
+    <string name="kata_sandi_baru">Kata Sandi Baru</string>
+    <string name="kata_sandi_lama">Kata Sandi Lama</string>
+    <string name="ikuti_tes">Ikuti Tes</string>
+    <string name="detail_join">Join Premium Kembangkan minat dan bakatmu</string>
+    <string name="username">Username</string>
+    <string name="hai">HAI :)</string>
+    <string name="button_join">Join Now</string>
+    <string name="lorem_ipsum">Lorem Ipsum</string>
+    <string name="progress_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inciditincidunt</string>
+    <string name="judul">Judul</string>
+    <string name="description">Description</string>
+    <string name="checklist">checklist</string>
+    <string name="image_modul">Image Modul</string>
+    <string name="title_modul">Modul Title</string>
+    <string name="introduction">Introduction</string>
+    <string name="backbutton">BackButton</string>
+    <string name="home">Home</string>
+    <string name="tagline">MinatKu siap membantu kamu mengatasi masalah minat dan bakatmu :)</string>
+    <string name="minat_dan_bakatmu">Minat Dan Bakatmu</string>
+    <string name="masukkan_kata">Masukkan kata</string>
+    <string name="minatku">MinatKu</string>
+    <string name="tombol_back">tombol back</string>
+    <string name="coming_soon">COMING SOON</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="hasil_asesmen">TOP 5 Berdasarkan Hasil Assesment Kamu</string>
+    <string name="question_text">Question Text</string>
+    <string name="dislike">Dislike</string>
+    <string name="enjoy">Enjoy</string>
+    <string name="netral">Netral</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="finish">Finish</string>
+    <string-array name="judul_dummy">
+        <item>Informatika</item>
+        <item>Matematika</item>
+        <item>Fisika</item>
+        <item>Sejarah</item>
+        <item>Pendidikan</item>
+    </string-array>
+
+    <string-array name="desc_dummy">
+        <item>Informatika Dasar</item>
+        <item>Sejarah Matematika</item>
+        <item>Pengertian Fisika</item>
+        <item>Penjelasan Tentang Sejarah Dasar</item>
+        <item>Mendidik Generasi Muda</item>
+    </string-array>
+
+    <string-array name="pict_dummy">
+        <item>https://disdikbud.acehtengahkab.go.id/media/2023.04/informatika1.jpg</item>
+        <item>https://cdnwpedutorenews.gramedia.net/wp-content/uploads/2021/09/17213900/cover-feature-mathematic.jpg</item>
+        <item>https://mmc.tirto.id/image/otf/500x0/2022/11/28/istock-1218011126_ratio-16x9.jpg</item>
+        <item>https://asset.kompas.com/crops/oClR1Sb2iB0_pWh0PxuVYP9kfb0=/0x6:627x424/750x500/data/photo/2021/04/05/606ab3fea3965.png</item>
+        <item>https://almasoem.sch.id/wp-content/uploads/2021/12/IMG_2894-scaled.jpg</item>
+    </string-array>
+
+    <string-array name="text_dummy">
+        <item>\t\tJurusan Teknik Informatika semakin lama semakin diminati oleh calon mahasiswa yang ingin mendaftar perguruan tinggi. Pasalnya hal ini disertai dengan masa depan yang cerah imbas perkembangan teknologi informasi yang semakin pesat. Teknik Informatika beberapa tahun terakhir menjadi program studi yang mengalami perkembangan begitu pesat. Ditambah lagi masalah atau isu perkembangan teknologi. Teknik Informatika hadir untuk menjawab permasalahan-permasalahan tersebut.
+              Bagi kalian mahasiswa atau calon mahasiswa Teknik Informatika kalian harus paham skill dasar yang wajib dimiliki oleh mahasiswa Teknik Informatika. Berikut skill dasar yang harus dimiliki mahasiswa Teknik Informatika.\n\n
+              1. Logika\n
+              Kemampuan dasar pertama yang harus dimiliki oleh seorang mahasiswa Informatika adalah logika. Logika diperlukan ketika mempelajari bahasa pemrograman yang dipakai. Meskipun setiap bahasa pemrograman memiliki teknik yang berbeda-beda, namun pada intinya bahasa pemrograman menuntut logika yang sistematis.
+              Dengan memiliki kemampuan logika dan pola pikir sistematis tentunya kamu akan terbantu ketika memahami teknik-teknik pemrograman. Dalam bahasa pemrograman juga dituntut ketelitian dan ketekunan. Karena jika diibaratkan, dalam bahasa pemrograman kita sedang berkomunikasi dengan sistem komputer. Jika salah sedikit dalam mengetik atau mengeluarkan perintah tentunya akan berdampak pada hasil atau luaran yang dihasilkan.
+              \n\n
+              2. Algoritma\n
+              Dalam matematika dan ilmu komputer, algoritma adalah sekumpulan instruksi kompleks yang terbatas, biasanya digunakan untuk memecahkan atau melakukan serangkaian masalah komputasi tertentu. Algoritma digunakan sebagai spesifikasi untuk melakukan komputasi dan pengolahan data.
+              \nMahasiswa Teknik Informatika juga harus memahami tentang algoritma. Nampaknya begitu susah dipisahkan antara matematika dan algoritma. Algoritma ini sendiri juga berhubungan langsung dengan logika. Jika memahami tentang algoritma, kalian dijamin akan bisa mengikuti perkuliahan sebagai mahasiswa Teknik Informatika.
+              \n\n
+              3. Kreativitas\n
+              Kemampuan selanjutnya yang wajib dimiliki mahasiswa Informatika adalah kreativitas. Teknik Informatika bukan hanya sekadar koding atau bahasa pemrograman. Namun, dalam kenyataannya beberapa perusahaan menuntut untuk bisa merancang sebuah program yang membutuhkan tampilan menarik. Kreativitas sangat terpakai untuk hal ini, tanpa adanya kreativitas hasil yang ada akan kurang menarik.\n
+              Jika kalian mahasiswa Informatika cobalah latih kreativitas kalian. Aspek ini sangat membantu kalian dalam merancang dan membangun sebuah proyek. Kreativitas memang bukan segalanya, namun tanpa adanya kreativitas produk yang kalian hasilkan akan sulit bersaing.
+              4. Manajemen Data\n
+              Di era perkembangan teknologi seperti sekarang, perusahaan-perusahaan membutuhkan lulusan Teknik Informasi. Tujuannya adalah menerjemahkan dan memahami pola komunikasi digital. Kemudian dari komunikasi tersebut diharapkan lulusan TI dapat mengatur data yang didapat dan mengimplementasikan untuk perkembangan perusahaan tersebut.
+              Dalam hal ini teknik analisis seorang lulusan TI sangat diharapkan. Pasalnya tanpa analisis yang kuat dan tepat tentunya hasil dari pemecahan masalahnya akan tidak maksimal. Jadi pastikan kalian sebagai mahasiswa atau calon mahasiswa TI bisa mengatur pengolahan data.
+              \n\n
+              5. Kerja Sama Tim\n
+              Kemampuan terakhir yang wajib kalian miliki tentunya adalah kerja sama tim. Seperti yang kita ketahui bahwa setiap pekerjaan nantinya akan berhubungan antara satu sama lain. Jadi, kerja sama tim yang baik sangat dituntut dalam proses kerja. Ditambah sumber data atau informasi perusahaan dikelola oleh tim Teknik Informasi.
+              Dalam kerja sama tim juga dituntut memiliki komunikasi yang baik. Hal ini disarankan dalam rangka memperlancar proses kerja. Komunikasi yang baik akan menghasilkan luaran yang baik pula. Sebaliknya, jika komunikasi kerja sama tim tidak baik maka hasilnya bisa jadi kurang maksimal.</item>
+        <item>\t\tTahukah kamu? Bahwa Matematika merupakan salah satu ilmu kuno yang sudah ada sejak ribuan tahun silam. Beberapa bukti tertulis terkait perkembangan Matematika di masa lalu pun berhasil ditemukan oleh para ilmuwan.Bukti pertama adalah Plimpton 322, sebuah tabel trigonometri tertua yang menjadi bagian sejarah dari Matematika Babilonia di tahun 1.900 SM. Selain itu, ada juga Lembaran Matematika Rhind yang merujuk pada sejarah Matematika Mesir di tahun 1.800-2.000 SM. Bukti tertulis lainnya adalah Lembaran Matematika Moskwa, yaitu tulisan Matematika kuno di era Matematika Mesir tahun 1.890 SM.
+              \n\t\tBaik Plimpton 322, Lembaran Matematika Rhin, dan Lembaran Matematika Moskwa, ketiganya sama-sama membahas terkait teori Pythagoras. Berdasarkan temuan ini, Pythagoras disebut sebagai pengembangan Matematika tertua setelah aritmatika dan geometri.
+              \n\t\tJauh sebelum itu, ilmuwan telah menemukan benda Matematika tertua di sekitar Pegunungan Lebombo, Afrika Selatan. Alat tersebut dikenal sebagai Tulang Lebombo yang kemungkinan berasal dari tahun 35 ribu SM.
+              \n\t\tPada permukaan Tulang Lebombo terdapat 29 goresan yang konon dipakai untuk menghitung fase peredaran bulan. Namun, ada juga yang menyebut goresan tersebut sebagai cara perempuan zaman dulu untuk menghitung siklus haidnya. </item>
+        <item>\t\tPengertian Fisika Ketika mempelajari hakikat ilmu fisika, mungkin Grameds akan menyukainya, karena memang tertarik pada ilmu pengetahuan tersebut. Meski demikian, ada pula yang dijamin justru akan merasa sebaliknya, karena memang tak tertarik dengan fisika. Fisika sendiri hampir sama dengan matematika, yang banyak dikatakan sebagai ilmu yang sulit untuk dipahami.
+              \n\t\tApabila matematika murni berisi angka dengan hitungan, maka fisika berisi kombinasi antara teori dengan hitungan. Fisika adalah pelajaran yang telah dikenal sejak duduk di bangku SMP kelas VII. Apabila Grameds di jenjang SMA memasuki jurusan IPA, maka pelajaran fisika juga akan menjadi teman karena mata pelajaran ini akan lebih kerap muncul pada jadwal pelajaran tiap harinya.
+              \n\t\tPada jurusan atau program studi tertentu, mahasiswa di perguruan tinggi juga akan mendapatkan mata kuliah fisika. Jadi, cek kembali jenis mata kuliah yang akan didapat. Jika selama ini menghindari fisika, maka hindari juga program studi yang menyediakan mata kuliah tersebut.
+              \n\t\tMeskipun, sedikit orang yang menyukai ilmu fisika, tetapi pelajaran satu ini sebenarnya menarik untuk dipelajari. Setelah memahami rumus dan cara perhitungan pada setiap materinya, maka dijamin proses menghitung akan menjadi lebih mudah dan begitu juga untuk proses memahami soal cerita.
+              \n\t\tMaka dari itu, tak ada salahnya untuk belajar mengenai hakikat ilmu fisika yang merupakan salah satu pelajaran paling berguna dalam kehidupan sehari-hari. Artinya, ilmu fisika merupakan ilmu yang penting untuk dipahami karena dari ilmu inilah ada berbagai hal bermanfaat yang dapat ditemukan.</item>
+        <item>\t\tPengertian sejarah sering kita kenal sebagai ilmu atau rangkaian suatu peristiwa yang telah terjadi di masa lalu. Namun, apa sebenarnya pengertian dari sejarah itu sendiri?\nSejarah diambil dalam bahasa Arab dari kata syajarah yang berarti pohon. Arti pohon disini dimaksudkan sebagai pohon keluarga atau silsilah serta usul dari adanya sesuatu, dan perkembangan tentang peristiwa yang berkesinambungan.
+              \nSedangkan dalam Bahasa Inggris dinamakan history, yang berasal dari bahasa Yunani dari kata historia yang mengandung makna inkuiri, wawancara, serta interogasi atau laporan dari seorang saksi mata mengenai hasil-hasil suatu tindakan. Dari bahasa Yunani tersebut, istilah historia masuk ke bahasa-bahasa lain, terutama melalui perantaraan bahasa Latin.
+              \nKBBI mendefinisikan sejarah sebagai pengetahuan maupun uraian tentang sebuah peristiwa yang benar-benar terjadi di masa lampau.
+              \n\nPengertian Sejarah
+              \n\nThomas Carlyle
+              \n\tSejarah adalah peristiwa di masa lampau, yang mempelajari biografi mereka yang terkenal sebagai penyelamat pada zamannya. Orang-orang besar tersebut adalah orang yang pernah dicatat sebagai peletak dasar sejarah.
+              \n\nIbnu Kaldun
+              \n\t\tMenurut, Ibnu Kaldun sejarah adalah catatan umat manusia atau peradaban dunia, tentang perubahan-perubahan yang terjadi pada watak masyarakat manusia itu.
+              \nMoh. Yamin
+              \n\t\tPengertian sejarah menurut Moh. Yamin, sejarah adalah suatu ilmu pengetahuan yang disusun atas hasil penyelidikan, dari beberapa peristiwa yang mampu dibuktikan dengan kenyataan (fakta).
+              \n\nRoeslan Abdulgani
+              \n\t\tMenurutnya Roeslan Abdulgani, sejarah adalah ilmu yang diibaratkan dengan penglihatan tiga dimensi; pertama melalui penglihatan ke masa silam, kedua masa sekarang, dan ketiga ke masa yang akan datang. Dengan kata lain, penyelidikan di masa lampau tidak dapat melepaskan diri dari kenyataan masa sekarang yang sedang dihadapi, dan juga tidak dapat dilepaskan dari perspektif masa depan.
+              \n\nSartono Kartodirdjo
+              \n\t\tSartono Kartodirdjo adalah guru besar bidang sejarah UGM. Ia mempelopori penulisan sejarah dengan perspektif Indonesia. Sejarawan ini membagi pengertian sejarah dalam arti subjektif dan objektif.
+              \nMenurut Sartono Kartodirdjo, pengertian sejarah dalam arti subjektif adalah suatu kontruksi (bangunan) yang disusun oleh penulis sebagai suatu uraian cerita (kisah). Kisah tersebut merupakan suatu kesatuan dari rangkaian fakta-fakta yang saling berkaitan.
+              \nAdapun sejarah dalam arti objektif menurut Sartono Kartodirjo adalah peristiwa sejarah itu sendiri atau proses sejarah dalam aktualitasnya.
+              \nDengan demikian, sejarah dalam arti objektif terkandung pengertian bahwa peristiwa sejarah tersebut hanya akan terjadi satu kali sehingga tidak berulang dan tidak dapat diulangi lagi.
+              \n\nKuntowijoyo
+              \n\t\tKuntowijoyo adalah seorang budayawan, sastrawan, dan sejarawan. Pengertian sejarah menurut Kuntowijoyo adalah rekonstruksi atau membangun kembali peristiwa masa lalu untuk dikontekstualisasikan ke dalam kehidupan kekinian dan masa datang.
+              \nKuntowijoyo pun menyebutkan sejarah menyuguhkan fakta secara diakronis, ideografis, unik, dan empiris</item>
+        <item>\t\tSeringkali kita temukan banyak anak didik yang pintar tapi memiliki attitude yang kurang baik. Padahal kecerdasan dan attitude harus sama-sama dimiliki oleh anak didik kita. Jadi kita harus menyeimbangi ilmu dan sikap kepada anak didik kita.
+              \nNah kali ini saya akan menjabarkan apa sih mendidik dan mengajar itu? Apa sih perbedaan dari keduanya? Dan bagaimana cara kita mendidik dan mengajar anak sd yg baik dan benar menurut kita sendiri.
+              \nMendidik adalah memproses siswa menjadi baik, sopan santun, jujur, bertanggung jawab. Sedangkan mengajar adalah memproses orang menjadi pintar, cerdas, pandai. Jika kita bersekolah cuma hanya menjadi sebuah lembaga pengajaran, dan tidak mendidik, akibatnya siswa kita hanya pintar tetapi tidak baik.
+              \nMendidik dan mengajar itu berbeda, tetapi keduanya saling membantu, dan saling mendukung. Contohnya mendidik, kita sebagai guru atau pendidik. Kita harus mendidik anak-anak kita supaya berbicara jujur, baik, tolong menolong sesama orang lain, sopan santun terhadap guru dan orang lain. Sedangkan mengajar, kita harus mengisi ilmu-ilmu pembelajaran, mengisi konsep-konsep dalam pembelajaran, dan menerangkan ilmu pembelajaran. Jadi mendidik dan mengajar itu berbeda.
+              \n\t\tJadi kita sebagai guru atau pendidik. Kita memiliki ajaran mendidik dan mengajar yang berbeda beda. Kalau menurut saya. Mendidik dan mengajar anak sd harus percaya diri, kita harus kreatif dalam mengajar, bisa mengkondisikan kelas, harus menarik, dan tidak boleh kaku.</item>
+    </string-array>
+
+    <string-array name="username_dummy">
+        <item>Siegfried69</item>
+        <item>andini_nrl</item>
+        <item>Brianydst</item>
+        <item>rzki</item>
+        <item>labib88</item>
+    </string-array>
+
+    <string-array name="namauser_dummy">
+        <item>Novallino Hamid Kiapmajaya</item>
+        <item>Nurul Andini</item>
+        <item>Brian Yudhistira</item>
+        <item>Muhammad Rizki</item>
+        <item>Mohammad Labib Husain</item>
+    </string-array>
+
+    <string-array name="fpuser_dummy">
+        <item>https://media.licdn.com/dms/image/D5603AQGXN4dSSkAEUw/profile-displayphoto-shrink_200_200/0/1700664983937?e=1708560000&amp;v=beta&amp;t=-1pwu2ZeKTR-ty0w8GqRkl7tteFRk76mqbzphnh4yqM</item>
+        <item>https://media.licdn.com/dms/image/D5603AQGtSOGaPcnkAQ/profile-displayphoto-shrink_200_200/0/1674730757025?e=1708560000&amp;v=beta&amp;t=eh19Ouqach2FGjk4rd71Yy_ByUTm9ONneMTqk9qdLbY</item>
+        <item>https://media.licdn.com/dms/image/D5603AQHG96uTel2qZg/profile-displayphoto-shrink_200_200/0/1697353665896?e=1708560000&amp;v=beta&amp;t=pvuHtXg1dCXS5ITfMKEGkK01jAO15ia3YRaT71BEnjY</item>
+        <item>https://media.licdn.com/dms/image/D5635AQF62RyhoqYncw/profile-framedphoto-shrink_200_200/0/1699946849005?e=1703523600&amp;v=beta&amp;t=6B9-RvHgqZk8Fkjf2lnoRiGb5fJcppsHMIPTkjPItr8</item>
+        <item>https://media.licdn.com/dms/image/D5635AQGxvwimx3-BMQ/profile-framedphoto-shrink_200_200/0/1700819436326?e=1703523600&amp;v=beta&amp;t=PbErixvEEhnrqxpxTrwFtsznvn9XDqSGYQkLuNIGWdQ</item>
+    </string-array>
+
+    <string-array name="tanggal_dummy">
+        <item>1 Hari Yang Lalu</item>
+        <item>1 Hari Yang Lalu</item>
+        <item>1 Hari Yang Lalu</item>
+        <item>1 Hari Yang Lalu</item>
+        <item>1 Hari Yang Lalu</item>
+    </string-array>
+
+    <string-array name="descpost_dummy">
+        <item>Penggunaan teknologi oleh manusia dimulai dengan pengubahan sumber daya alam menjadi alat-alat sederhana. Penemuan prasejarah tentang kemampuan mengendalikan api telah menaikkan ketersediaan sumber-sumber pangan, sedangkan penciptaan roda telah membantu manusia dalam bepergian dan mengendalikan lingkungan mereka. Perkembangan teknologi terbaru, termasuk di antaranya mesin cetak, telepon, dan Internet.</item>
+        <item>Seni adalah keahlian membuat karya yang bermutu (dilihat dari segi kehalusannya, keindahannya, fungsinya, bentuknya, makna dari bentuknya, dan sebagainya), seperti tari, lukisan, ukiran.[1] Seni meliputi banyak kegiatan manusia dalam menciptakan karya visual, audio, atau pertunjukan yang mengungkapkan imajinasi, gagasan, atau keprigelan teknik pembuatnya, untuk dihargai keindahannya atau kekuatan emosinya..</item>
+        <item>Ilmu atau ilmu pengetahuan adalah suatu usaha sistematis dengan metode ilmiah dalam pengembangan dan penataan pengetahuan yang dibuktikan dengan penjelasan dan prediksi yang teruji sebagai pemahaman manusia tentang alam semesta dan dunianya. Segi-segi ini dibatasi agar dihasilkan rumusan-rumusan pasti</item>
+        <item>Komputasi awan atau komputasi gemawan adalah gabungan pemanfaatan teknologi komputer dan pengembangan berbasis Internet. Awan adalah metafora dari internet, sebagaimana awan yang sering digambarkan di diagram jaringan komputer.</item>
+        <item>Pada akhir tahun 2023 nanti, Bangkit akan melatih lebih dari 15.000 orang. Ini membuktikan bahwa program yang berada di bawah naungan Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi, dirancang khusus oleh Google, serta didukung penuh oleh GoTo dan Traveloka ini memiliki dampak yang masif terhadap calon talenta digital di Indonesia.</item>
+    </string-array>
+    <string name="title_activity_end_test">EndTestActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+    <string name="masuk_ke_home">Masuk ke Home</string>
 </resources>
